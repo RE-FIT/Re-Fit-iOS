@@ -52,6 +52,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         EyeButton.tintColor = .clear
     }
     
+    @IBAction func FindButton(_ sender: Any) {
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "FindVC") as? FindViewController else {return}
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+    }
+    
     @IBAction func JoinButton(_ sender: Any) {
         guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "JoinVC") as? JoinViewController else {return}
         
