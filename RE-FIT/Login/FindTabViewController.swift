@@ -33,7 +33,7 @@ class FindTabViewController: TabmanViewController {
         // 배경 회색으로 나옴 -> 하얀색으로 바뀜
         bar.backgroundView.style = .clear
         // 간격 설정
-        bar.layout.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 25, right: 0)
+        bar.layout.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 30, right: 0)
         // 버튼 글씨 커스텀
         bar.buttons.customize { (button) in
             button.tintColor = .systemGray4

@@ -19,6 +19,8 @@
 		C77166862A4D654100E7F8C8 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166852A4D654100E7F8C8 /* Community.storyboard */; };
 		C77166882A4D655E00E7F8C8 /* Clothes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166872A4D655E00E7F8C8 /* Clothes.storyboard */; };
 		C771668A2A4D656800E7F8C8 /* MyHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166892A4D656800E7F8C8 /* MyHome.storyboard */; };
+		C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79909932A5E522100296DEC /* FindIDViewController.swift */; };
+		C79909962A5E522C00296DEC /* FindPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79909952A5E522C00296DEC /* FindPWViewController.swift */; };
 		C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B5AA12A4D605A00A8B485 /* AppDelegate.swift */; };
 		C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B5AA32A4D605A00A8B485 /* SceneDelegate.swift */; };
 		C79B5AA62A4D605A00A8B485 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B5AA52A4D605A00A8B485 /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		C77166852A4D654100E7F8C8 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		C77166872A4D655E00E7F8C8 /* Clothes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clothes.storyboard; sourceTree = "<group>"; };
 		C77166892A4D656800E7F8C8 /* MyHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHome.storyboard; sourceTree = "<group>"; };
+		C79909932A5E522100296DEC /* FindIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIDViewController.swift; sourceTree = "<group>"; };
+		C79909952A5E522C00296DEC /* FindPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPWViewController.swift; sourceTree = "<group>"; };
 		C79B5A9E2A4D605A00A8B485 /* RE-FIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RE-FIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C79B5AA12A4D605A00A8B485 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C79B5AA32A4D605A00A8B485 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				C76877662A5C3FA9004FA71F /* FindTabViewController.swift */,
 				C76877682A5C4111004FA71F /* TabIDViewController.swift */,
 				C768776A2A5C411C004FA71F /* TabPWViewController.swift */,
+				C79909932A5E522100296DEC /* FindIDViewController.swift */,
+				C79909952A5E522C00296DEC /* FindPWViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -300,11 +306,13 @@
 			files = (
 				C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */,
 				C79B5AA62A4D605A00A8B485 /* ViewController.swift in Sources */,
+				C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */,
 				C7B548312A4DDD4A001B3F62 /* MainTabViewController.swift in Sources */,
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
 				C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */,
 				C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */,
 				C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */,
+				C79909962A5E522C00296DEC /* FindPWViewController.swift in Sources */,
 				C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */,
 				C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */,
 				C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */,
