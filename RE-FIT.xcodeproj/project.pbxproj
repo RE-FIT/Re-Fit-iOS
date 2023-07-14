@@ -32,6 +32,13 @@
 		C7B548352A4DDE75001B3F62 /* ClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */; };
 		C7B548372A4DDE9E001B3F62 /* MyHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */; };
 		C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B778C22A4E83FC00494CEC /* APIURL.swift */; };
+		C7B7B4AB2A5FA8BC00584E76 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4AA2A5FA8BC00584E76 /* MyInfoViewController.swift */; };
+		C7B7B4AD2A5FA8CA00584E76 /* MyFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4AC2A5FA8CA00584E76 /* MyFeedViewController.swift */; };
+		C7B7B4AF2A5FA8D400584E76 /* MyLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4AE2A5FA8D400584E76 /* MyLikeViewController.swift */; };
+		C7B7B4B12A5FA8E500584E76 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4B02A5FA8E500584E76 /* SettingsViewController.swift */; };
+		C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4B22A5FF9A200584E76 /* EditProfileViewController.swift */; };
+		C7B7B4B52A5FF9AD00584E76 /* ChangePWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4B42A5FF9AD00584E76 /* ChangePWViewController.swift */; };
+		C7B7B4B72A5FFA0200584E76 /* InfoTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B7B4B62A5FFA0200584E76 /* InfoTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +68,13 @@
 		C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesViewController.swift; sourceTree = "<group>"; };
 		C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHomeViewController.swift; sourceTree = "<group>"; };
 		C7B778C22A4E83FC00494CEC /* APIURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIURL.swift; sourceTree = "<group>"; };
+		C7B7B4AA2A5FA8BC00584E76 /* MyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
+		C7B7B4AC2A5FA8CA00584E76 /* MyFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyFeedViewController.swift; sourceTree = "<group>"; };
+		C7B7B4AE2A5FA8D400584E76 /* MyLikeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyLikeViewController.swift; sourceTree = "<group>"; };
+		C7B7B4B02A5FA8E500584E76 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C7B7B4B22A5FF9A200584E76 /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		C7B7B4B42A5FF9AD00584E76 /* ChangePWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePWViewController.swift; sourceTree = "<group>"; };
+		C7B7B4B62A5FFA0200584E76 /* InfoTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTabViewController.swift; sourceTree = "<group>"; };
 		D84A43E7FECEAC244D1BCF50 /* Pods_RE_FIT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RE_FIT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF9FFD9575CDA486618AA276 /* Pods-RE-FIT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RE-FIT.release.xcconfig"; path = "Target Support Files/Pods-RE-FIT/Pods-RE-FIT.release.xcconfig"; sourceTree = "<group>"; };
 		FA602EA57996B58FE317E919 /* Pods-RE-FIT.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RE-FIT.debug.xcconfig"; path = "Target Support Files/Pods-RE-FIT/Pods-RE-FIT.debug.xcconfig"; sourceTree = "<group>"; };
@@ -156,6 +170,13 @@
 			children = (
 				C77166892A4D656800E7F8C8 /* MyHome.storyboard */,
 				C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */,
+				C7B7B4AA2A5FA8BC00584E76 /* MyInfoViewController.swift */,
+				C7B7B4AC2A5FA8CA00584E76 /* MyFeedViewController.swift */,
+				C7B7B4AE2A5FA8D400584E76 /* MyLikeViewController.swift */,
+				C7B7B4B02A5FA8E500584E76 /* SettingsViewController.swift */,
+				C7B7B4B22A5FF9A200584E76 /* EditProfileViewController.swift */,
+				C7B7B4B42A5FF9AD00584E76 /* ChangePWViewController.swift */,
+				C7B7B4B62A5FFA0200584E76 /* InfoTabViewController.swift */,
 			);
 			path = MyHome;
 			sourceTree = "<group>";
@@ -304,13 +325,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */,
 				C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */,
+				C7B7B4AD2A5FA8CA00584E76 /* MyFeedViewController.swift in Sources */,
+				C7B7B4B12A5FA8E500584E76 /* SettingsViewController.swift in Sources */,
 				C79B5AA62A4D605A00A8B485 /* ViewController.swift in Sources */,
 				C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */,
 				C7B548312A4DDD4A001B3F62 /* MainTabViewController.swift in Sources */,
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
+				C7B7B4B72A5FFA0200584E76 /* InfoTabViewController.swift in Sources */,
 				C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */,
+				C7B7B4AF2A5FA8D400584E76 /* MyLikeViewController.swift in Sources */,
 				C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */,
+				C7B7B4B52A5FF9AD00584E76 /* ChangePWViewController.swift in Sources */,
 				C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */,
 				C79909962A5E522C00296DEC /* FindPWViewController.swift in Sources */,
 				C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */,
@@ -320,6 +347,7 @@
 				C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */,
 				C7B548372A4DDE9E001B3F62 /* MyHomeViewController.swift in Sources */,
 				C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */,
+				C7B7B4AB2A5FA8BC00584E76 /* MyInfoViewController.swift in Sources */,
 				C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -53,4 +53,28 @@ class MyHomeViewController: UIViewController {
         SettingView.layer.cornerRadius = 5
         SettingView.clipsToBounds = true
     }
+    
+    @IBAction func InfoTapped(_ sender: Any) {
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "MyInfoVC") as? MyInfoViewController else {return}
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+    }
+    
+    @IBAction func FeedTapped(_ sender: Any) {
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "MyFeedVC") as? MyFeedViewController else {return}
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+    }
+    
+    @IBAction func LikeTapped(_ sender: Any) {
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "MyLikeVC") as? MyLikeViewController else {return}
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+    }
+    
+    @IBAction func SettingTapped(_ sender: Any) {
+        guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsVC") as? SettingsViewController else {return}
+        
+        self.navigationController?.pushViewController(rvc, animated: true)
+    }
 }
