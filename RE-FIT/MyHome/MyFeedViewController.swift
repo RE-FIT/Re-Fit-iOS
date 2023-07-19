@@ -6,11 +6,13 @@
 //
 
 import UIKit
-import BetterSegmentedControl
 
 class MyFeedViewController: UIViewController {
     
     @IBOutlet weak var FeedSC: UISegmentedControl!
+    @IBOutlet weak var SellView: UIView!
+    @IBOutlet weak var ShareView: UIView!
+    @IBOutlet weak var BuyView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,25 +21,34 @@ class MyFeedViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .black
         
         FeedSC.removeBorders()
-        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
-        FeedSC.setTitleTextAttributes(titleTextAttributes, for:.normal)
-
-        let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        FeedSC.setTitleTextAttributes(titleTextAttributes1, for:.selected)
         
-        let font = UIFont.systemFont(ofSize: 16)
-        FeedSC.setTitleTextAttributes([NSAttributedString.Key.font: font], for: .normal)
+        let titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+        let titleTextAttributes1 = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        let font = UIFont.systemFont(ofSize: 14, weight: .semibold)
+        
+        FeedSC.setTitleTextAttributes([NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
+        FeedSC.setTitleTextAttributes([NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        
+        SellView.alpha = 1
+        ShareView.alpha = 0
+        BuyView.alpha = 0
     }
     
     @IBAction func ChangeSegment(_ sender: Any) {
         if (sender as AnyObject).selectedSegmentIndex == 0 {
-            view.backgroundColor = .red
+            SellView.alpha = 1
+            ShareView.alpha = 0
+            BuyView.alpha = 0
         }
         else if (sender as AnyObject).selectedSegmentIndex == 1 {
-            view.backgroundColor = .orange
+            SellView.alpha = 0
+            ShareView.alpha = 1
+            BuyView.alpha = 0
         }
         else if (sender as AnyObject).selectedSegmentIndex == 2 {
-            view.backgroundColor = .black
+            SellView.alpha = 0
+            ShareView.alpha = 0
+            BuyView.alpha = 1
         }
     }
 }
