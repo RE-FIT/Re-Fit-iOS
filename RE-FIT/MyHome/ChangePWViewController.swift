@@ -8,11 +8,14 @@
 import UIKit
 
 class ChangePWViewController: UIViewController {
-
+    
+    @IBOutlet weak var InfoView: UIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        InfoView.layer.cornerRadius = 10
+        InfoView.clipsToBounds = true
     }
     
 

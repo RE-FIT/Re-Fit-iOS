@@ -471,6 +471,18 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M6n-bb-SfB">
+                                <rect key="frame" x="310" y="544" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="2Op-vs-aJf"/>
+                                    <constraint firstAttribute="width" constant="35" id="AYd-iF-BNK"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Gender_Tap"/>
+                                <connections>
+                                    <action selector="SelectGender:" destination="mT0-65-tLi" eventType="touchUpInside" id="QQF-AP-won"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ivl-Xv-zfP"/>
                         <color key="backgroundColor" red="0.94133394960000005" green="0.9487617612" blue="0.96078616380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -484,11 +496,13 @@
                             <constraint firstItem="cZb-T2-YpG" firstAttribute="leading" secondItem="Ivl-Xv-zfP" secondAttribute="leading" constant="40" id="6eF-gp-q0s"/>
                             <constraint firstItem="cZb-T2-YpG" firstAttribute="top" secondItem="Ndd-8o-Dh2" secondAttribute="bottom" constant="3" id="6rN-1L-aQX"/>
                             <constraint firstItem="Ndd-8o-Dh2" firstAttribute="leading" secondItem="Ivl-Xv-zfP" secondAttribute="leading" constant="42" id="Aoj-Rd-Ecj"/>
+                            <constraint firstItem="Ivl-Xv-zfP" firstAttribute="trailing" secondItem="M6n-bb-SfB" secondAttribute="trailing" constant="48" id="BYD-B5-edr"/>
                             <constraint firstItem="A2X-8d-qdI" firstAttribute="top" secondItem="tIa-Ea-LBy" secondAttribute="bottom" constant="20" id="Bwx-Bv-Lmh"/>
                             <constraint firstItem="Pkb-BX-Prn" firstAttribute="leading" secondItem="Ivl-Xv-zfP" secondAttribute="leading" constant="42" id="CTM-tC-1IE"/>
                             <constraint firstItem="V5U-Gd-dee" firstAttribute="top" secondItem="3Fd-7i-vYX" secondAttribute="bottom" constant="20" id="EJz-hD-JgW"/>
                             <constraint firstItem="yhX-c7-C7Z" firstAttribute="leading" secondItem="ZX0-Ba-4HX" secondAttribute="trailing" constant="7" id="FWX-EB-cW1"/>
                             <constraint firstItem="aGA-Aq-vr0" firstAttribute="leading" secondItem="tIa-Ea-LBy" secondAttribute="trailing" constant="7" id="J90-Jq-bZ0"/>
+                            <constraint firstItem="M6n-bb-SfB" firstAttribute="top" secondItem="2Cv-1Y-xhA" secondAttribute="bottom" constant="39" id="JQO-4O-g1R"/>
                             <constraint firstItem="46j-Ra-tiy" firstAttribute="leading" secondItem="Ivl-Xv-zfP" secondAttribute="leading" constant="40" id="LGQ-qA-zDW"/>
                             <constraint firstItem="U0N-Qd-Ce0" firstAttribute="top" secondItem="USm-35-ZDX" secondAttribute="bottom" constant="2" id="Mxj-e1-WTl"/>
                             <constraint firstItem="Ndd-8o-Dh2" firstAttribute="top" secondItem="2Cv-1Y-xhA" secondAttribute="bottom" constant="20" id="NDG-Y1-KDy"/>
@@ -533,6 +547,7 @@
                         <outlet property="CheckButton" destination="46j-Ra-tiy" id="tff-BM-ru3"/>
                         <outlet property="EmailTextField" destination="ZX0-Ba-4HX" id="0gv-3v-9m2"/>
                         <outlet property="EyeButton" destination="tq1-ns-4aL" id="jmf-yZ-ONe"/>
+                        <outlet property="GenderTextField" destination="cZb-T2-YpG" id="MHu-ZA-iUt"/>
                         <outlet property="IDTextField" destination="fRB-2L-hdS" id="2ch-7s-1wN"/>
                         <outlet property="NameTextField" destination="tIa-Ea-LBy" id="esm-yU-hZz"/>
                         <outlet property="PWTextField" destination="3Fd-7i-vYX" id="ecD-aw-SOX"/>
@@ -1225,6 +1240,7 @@
         <image name="Check_Icon" width="18" height="18"/>
         <image name="Eye_Icon" width="16" height="14.5"/>
         <image name="FindID_Icon" width="50" height="50"/>
+        <image name="Gender_Tap" width="10" height="6"/>
         <image name="Kakao_Login" width="296" height="50"/>
         <image name="Mail_Icon" width="31" height="25"/>
         <image name="RE-FIT_SmallLogo" width="159.5" height="166"/>

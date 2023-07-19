@@ -1,24 +1,24 @@
 PODS:
-  - BetterSegmentedControl (2.0.1)
+  - DropDown (2.3.13)
   - Pageboy (4.0.2)
   - Tabman (3.0.1):
     - Pageboy (~> 4.0.2)
 
 DEPENDENCIES:
-  - BetterSegmentedControl (~> 2.0)
+  - DropDown
   - Tabman (~> 3.0)
 
 SPEC REPOS:
   trunk:
-    - BetterSegmentedControl
+    - DropDown
     - Pageboy
     - Tabman
 
 SPEC CHECKSUMS:
-  BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Pageboy: 34ff11e8d1041b81769d5bcde9b19a0cb7218bd9
   Tabman: a5880789298f81d3f2cdd6510b54ae637cfd8e09
 
-PODFILE CHECKSUM: b950d4337942f7a54323abe7d33d1162ab4cd32d
+PODFILE CHECKSUM: 1dc42a752f46685806ee254a4c3b92aa53379110
 
 COCOAPODS: 1.11.3

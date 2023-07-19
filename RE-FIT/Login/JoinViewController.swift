@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DropDown
 
 class JoinViewController: UIViewController, UITextFieldDelegate {
     
@@ -15,7 +16,12 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var NameTextField: UITextField!
     @IBOutlet weak var BDTextField: UITextField!
+    @IBOutlet weak var GenderTextField: UITextField!
     @IBOutlet weak var CheckButton: UIButton!
+    
+    let dropdown = DropDown()
+    
+    let Gender = [" 남자", " 여자"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,22 +44,64 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         BDTextField.layer.cornerRadius = 5
         BDTextField.layer.borderWidth = 1
         BDTextField.layer.borderColor = UIColor.clear.cgColor
+        GenderTextField.layer.cornerRadius = 5
+        GenderTextField.layer.borderWidth = 1
+        GenderTextField.layer.borderColor = UIColor.clear.cgColor
         
         IDTextField.delegate = self
         PWTextField.delegate = self
         EmailTextField.delegate = self
         NameTextField.delegate = self
         BDTextField.delegate = self
+        GenderTextField.delegate = self
         textFieldDidBeginEditing(IDTextField)
         textFieldDidBeginEditing(PWTextField)
         textFieldDidBeginEditing(EmailTextField)
         textFieldDidBeginEditing(NameTextField)
         textFieldDidBeginEditing(BDTextField)
+        textFieldDidBeginEditing(GenderTextField)
         textFieldDidEndEditing(IDTextField)
         textFieldDidEndEditing(PWTextField)
         textFieldDidEndEditing(EmailTextField)
         textFieldDidEndEditing(NameTextField)
         textFieldDidEndEditing(BDTextField)
+        textFieldDidEndEditing(GenderTextField)
+        
+        GenderTextField.isEnabled = false
+        
+        initUI()
+        setDropdown()
+    }
+    
+    func initUI() {
+        DropDown.appearance().textColor = UIColor.darkGray // 아이템 텍스트 색상
+        DropDown.appearance().selectedTextColor = UIColor.black // 선택된 아이템 텍스트 색상
+        DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
+        DropDown.appearance().selectionBackgroundColor = UIColor.white // 선택한 아이템 배경 색상
+        DropDown.appearance().setupCornerRadius(5)
+            dropdown.dismissMode = .automatic // 팝업을 닫을 모드 설정
+        DropDown.appearance().textFont = UIFont(name: "AppleSDGothicNeo-Regular", size: 12) ?? UIFont.systemFont(ofSize: 12)
+    }
+    
+    func setDropdown() {
+        // dataSource로 ItemList를 연결
+        dropdown.dataSource = Gender
+        dropdown.cellHeight = 35
+        // anchorView를 통해 UI와 연결
+        dropdown.anchorView = self.GenderTextField
+        
+        // View를 갖리지 않고 View아래에 Item 팝업이 붙도록 설정
+        dropdown.bottomOffset = CGPoint(x: 0, y: GenderTextField.bounds.height)
+        
+        // Item 선택 시 처리
+        dropdown.selectionAction = { [weak self] (index, item) in
+            //선택한 Item을 TextField에 넣어준다.
+            self!.GenderTextField.text = " \(item)"
+        }
+        
+        // 취소 시 처리
+        dropdown.cancelAction = { [weak self] in
+        }
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -66,6 +114,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         textField.layer.borderColor = UIColor.clear.cgColor
         textField.layer.cornerRadius = 5
         textField.layer.borderWidth = 1.0
+    }
+    
+    @IBAction func SelectGender(_ sender: Any) {
+        dropdown.show()
     }
     
     @IBAction func ShowAgree(_ sender: Any) {
