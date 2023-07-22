@@ -90,6 +90,9 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         dropdown.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.GenderTextField.text = " \(item)"
+            self!.GenderTextField.layer.borderColor = UIColor.clear.cgColor
+            self!.GenderTextField.layer.cornerRadius = 5
+            self!.GenderTextField.layer.borderWidth = 1.0
         }
         
         // 취소 시 처리
@@ -110,6 +113,9 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func SelectGender(_ sender: Any) {
+        GenderTextField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor//your color
+        GenderTextField.layer.cornerRadius = 5
+        GenderTextField.layer.borderWidth = 1.0
         dropdown.show()
     }
 }
