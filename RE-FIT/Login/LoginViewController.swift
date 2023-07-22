@@ -18,11 +18,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
 
         IDTextField.layer.cornerRadius = 5
-        IDTextField.layer.borderWidth = 1
-        IDTextField.layer.borderColor = UIColor.clear.cgColor
+        IDTextField.layer.borderColor = UIColor.white.cgColor
+        IDTextField.layer.borderWidth = 1.0
+        IDTextField.layer.masksToBounds = true
         PWTextField.layer.cornerRadius = 5
-        PWTextField.layer.borderWidth = 1
-        PWTextField.layer.borderColor = UIColor.clear.cgColor
+        PWTextField.layer.borderColor = UIColor.white.cgColor
+        PWTextField.layer.borderWidth = 1.0
+        PWTextField.layer.masksToBounds = true
         
         IDTextField.delegate = self
         PWTextField.delegate = self

@@ -9,15 +9,17 @@ import Foundation
 
 struct APIURL {
     // MARK: - Base URL
-    static let baseURL = "http://www.rebornapp.shop"
+    static let baseURL = "http://www.umc-refit.com"
     
     // MARK: - newShop URL
-    static let newStoreURL = baseURL + "/store/new"
+    static let newLoginURL = baseURL + "/auth"
     
     // MARK: - Review URL
-    static let reviewURL = baseURL + "/review/best"
+    static let clothURL = baseURL + "/refit/clothe"
     
-    static let inprogressURL = baseURL + "/reborns/inprogress/user/"
+    static let communityURL = baseURL + "/refit/community"
     
-    static let willLikeshopURL = baseURL + "/store/likeable-stores"
+    static let chatURL = baseURL + "/chat/room"
+    
+    static let mypageURL = baseURL + "/refit/mypage"
 }

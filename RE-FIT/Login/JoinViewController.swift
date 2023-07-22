@@ -5,6 +5,7 @@
 //  Created by jaegu park on 7/07/23.
 //
 
+import Foundation
 import UIKit
 import DropDown
 
@@ -23,6 +24,8 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     
     let Gender = [" 남자", " 여자"]
     
+    var EmailData: EmailresultModel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,23 +33,29 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.tintColor = .black
         
         IDTextField.layer.cornerRadius = 5
-        IDTextField.layer.borderWidth = 1
-        IDTextField.layer.borderColor = UIColor.clear.cgColor
+        IDTextField.layer.borderColor = UIColor.white.cgColor
+        IDTextField.layer.borderWidth = 1.0
+        IDTextField.layer.masksToBounds = true
         PWTextField.layer.cornerRadius = 5
-        PWTextField.layer.borderWidth = 1
-        PWTextField.layer.borderColor = UIColor.clear.cgColor
+        PWTextField.layer.borderColor = UIColor.white.cgColor
+        PWTextField.layer.borderWidth = 1.0
+        PWTextField.layer.masksToBounds = true
         EmailTextField.layer.cornerRadius = 5
-        EmailTextField.layer.borderWidth = 1
-        EmailTextField.layer.borderColor = UIColor.clear.cgColor
+        EmailTextField.layer.borderColor = UIColor.white.cgColor
+        EmailTextField.layer.borderWidth = 1.0
+        EmailTextField.layer.masksToBounds = true
         NameTextField.layer.cornerRadius = 5
-        NameTextField.layer.borderWidth = 1
-        NameTextField.layer.borderColor = UIColor.clear.cgColor
+        NameTextField.layer.borderColor = UIColor.white.cgColor
+        NameTextField.layer.borderWidth = 1.0
+        NameTextField.layer.masksToBounds = true
         BDTextField.layer.cornerRadius = 5
-        BDTextField.layer.borderWidth = 1
-        BDTextField.layer.borderColor = UIColor.clear.cgColor
+        BDTextField.layer.borderColor = UIColor.white.cgColor
+        BDTextField.layer.borderWidth = 1.0
+        BDTextField.layer.masksToBounds = true
         GenderTextField.layer.cornerRadius = 5
-        GenderTextField.layer.borderWidth = 1
-        GenderTextField.layer.borderColor = UIColor.clear.cgColor
+        GenderTextField.layer.borderColor = UIColor.white.cgColor
+        GenderTextField.layer.borderWidth = 1.0
+        GenderTextField.layer.masksToBounds = true
         
         IDTextField.delegate = self
         PWTextField.delegate = self
@@ -60,12 +69,12 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         textFieldDidBeginEditing(NameTextField)
         textFieldDidBeginEditing(BDTextField)
         textFieldDidBeginEditing(GenderTextField)
+        textFieldDidEndEditing(GenderTextField)
         textFieldDidEndEditing(IDTextField)
         textFieldDidEndEditing(PWTextField)
         textFieldDidEndEditing(EmailTextField)
         textFieldDidEndEditing(NameTextField)
         textFieldDidEndEditing(BDTextField)
-        textFieldDidEndEditing(GenderTextField)
         
         GenderTextField.isEnabled = false
         
@@ -97,6 +106,9 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         dropdown.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.GenderTextField.text = " \(item)"
+            self!.GenderTextField.layer.borderColor = UIColor.clear.cgColor
+            self!.GenderTextField.layer.cornerRadius = 5
+            self!.GenderTextField.layer.borderWidth = 1.0
         }
         
         // 취소 시 처리
@@ -117,6 +129,9 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func SelectGender(_ sender: Any) {
+        GenderTextField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor//your color
+        GenderTextField.layer.cornerRadius = 5
+        GenderTextField.layer.borderWidth = 1.0
         dropdown.show()
     }
     
@@ -134,6 +149,11 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         let eyeImage = EyeButton.isSelected ? "Eye_Icon2" : "Eye_Icon"
         EyeButton.setImage(UIImage(named: eyeImage), for: .normal)
         EyeButton.tintColor = .clear
+    }
+    
+    @IBAction func EmailPostTapped(_ sender: Any) {
+        let parameterDatas = EmailModel(email: EmailTextField.text ?? "")
+        APIHandlerEmailPost.instance.SendingPostEmail(parameters: parameterDatas) { result in self.EmailData = result }
     }
     
     @IBAction func CheckTapped(_ sender: Any) {

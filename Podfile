@@ -9,6 +9,7 @@ target 'RE-FIT' do
 
   pod 'Tabman', '~> 3.0'
   pod 'DropDown'
+  pod 'Alamofire'
 
   post_install do |installer|
     installer.pods_project.targets.each do |target|

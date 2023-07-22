@@ -12,10 +12,12 @@
 		C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414432A5825AE00946ECF /* JoinViewController.swift */; };
 		C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414452A583B6E00946ECF /* AgreeViewController.swift */; };
 		C73F31A82A56B49800D515A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73F31A72A56B49800D515A8 /* Login.storyboard */; };
+		C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76870E72A6AAEA000022FC0 /* EmailPost.swift */; };
 		C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877642A5C3F26004FA71F /* FindViewController.swift */; };
 		C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877662A5C3FA9004FA71F /* FindTabViewController.swift */; };
 		C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877682A5C4111004FA71F /* TabIDViewController.swift */; };
 		C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768776A2A5C411C004FA71F /* TabPWViewController.swift */; };
+		C76D92E52A6C0B8C0088F2D5 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */; };
 		C77166862A4D654100E7F8C8 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166852A4D654100E7F8C8 /* Community.storyboard */; };
 		C77166882A4D655E00E7F8C8 /* Clothes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166872A4D655E00E7F8C8 /* Clothes.storyboard */; };
 		C771668A2A4D656800E7F8C8 /* MyHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166892A4D656800E7F8C8 /* MyHome.storyboard */; };
@@ -52,10 +54,12 @@
 		C73414432A5825AE00946ECF /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		C73414452A583B6E00946ECF /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
 		C73F31A72A56B49800D515A8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C76870E72A6AAEA000022FC0 /* EmailPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPost.swift; sourceTree = "<group>"; };
 		C76877642A5C3F26004FA71F /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		C76877662A5C3FA9004FA71F /* FindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTabViewController.swift; sourceTree = "<group>"; };
 		C76877682A5C4111004FA71F /* TabIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIDViewController.swift; sourceTree = "<group>"; };
 		C768776A2A5C411C004FA71F /* TabPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPWViewController.swift; sourceTree = "<group>"; };
+		C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		C77166852A4D654100E7F8C8 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		C77166872A4D655E00E7F8C8 /* Clothes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clothes.storyboard; sourceTree = "<group>"; };
 		C77166892A4D656800E7F8C8 /* MyHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHome.storyboard; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		C73F31A62A56B48100D515A8 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				C78C5DE92A6A02E6000B5EEC /* LoginAPI */,
 				C73F31A72A56B49800D515A8 /* Login.storyboard */,
 				C73414412A57B3DE00946ECF /* LoginViewController.swift */,
 				C73414432A5825AE00946ECF /* JoinViewController.swift */,
@@ -119,6 +124,35 @@
 				C79909952A5E522C00296DEC /* FindPWViewController.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		C78C5DE62A6A02C8000B5EEC /* MyHomeAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MyHomeAPI;
+			sourceTree = "<group>";
+		};
+		C78C5DE72A6A02D3000B5EEC /* ClothesAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ClothesAPI;
+			sourceTree = "<group>";
+		};
+		C78C5DE82A6A02DB000B5EEC /* CommunityAPI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CommunityAPI;
+			sourceTree = "<group>";
+		};
+		C78C5DE92A6A02E6000B5EEC /* LoginAPI */ = {
+			isa = PBXGroup;
+			children = (
+				C76870E72A6AAEA000022FC0 /* EmailPost.swift */,
+			);
+			path = LoginAPI;
 			sourceTree = "<group>";
 		};
 		C79B5A952A4D605A00A8B485 = {
@@ -142,8 +176,8 @@
 		C79B5AA02A4D605A00A8B485 /* RE-FIT */ = {
 			isa = PBXGroup;
 			children = (
-				C73F31A62A56B48100D515A8 /* Login */,
 				C7B778C12A4E83A300494CEC /* Network */,
+				C73F31A62A56B48100D515A8 /* Login */,
 				C7B5483A2A4DDFBD001B3F62 /* MyHome */,
 				C7B548392A4DDFB5001B3F62 /* Clothes */,
 				C7B548382A4DDFA2001B3F62 /* Community */,
@@ -162,8 +196,10 @@
 		C7B548382A4DDFA2001B3F62 /* Community */ = {
 			isa = PBXGroup;
 			children = (
+				C78C5DE82A6A02DB000B5EEC /* CommunityAPI */,
 				C77166852A4D654100E7F8C8 /* Community.storyboard */,
 				C7B548322A4DDE49001B3F62 /* CommunityViewController.swift */,
+				C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -171,6 +207,7 @@
 		C7B548392A4DDFB5001B3F62 /* Clothes */ = {
 			isa = PBXGroup;
 			children = (
+				C78C5DE72A6A02D3000B5EEC /* ClothesAPI */,
 				C77166872A4D655E00E7F8C8 /* Clothes.storyboard */,
 				C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */,
 			);
@@ -180,6 +217,7 @@
 		C7B5483A2A4DDFBD001B3F62 /* MyHome */ = {
 			isa = PBXGroup;
 			children = (
+				C78C5DE62A6A02C8000B5EEC /* MyHomeAPI */,
 				C77166892A4D656800E7F8C8 /* MyHome.storyboard */,
 				C7B548362A4DDE9E001B3F62 /* MyHomeViewController.swift */,
 				C7B7B4AA2A5FA8BC00584E76 /* MyInfoViewController.swift */,
@@ -372,7 +410,9 @@
 				C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */,
 				C7B7B4AB2A5FA8BC00584E76 /* MyInfoViewController.swift in Sources */,
 				C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */,
+				C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */,
 				C7BB29512A680B74009F36F8 /* FeedSellTableViewCell.swift in Sources */,
+				C76D92E52A6C0B8C0088F2D5 /* CommunityTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
