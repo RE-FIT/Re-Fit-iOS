@@ -18,6 +18,8 @@
 		C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877682A5C4111004FA71F /* TabIDViewController.swift */; };
 		C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768776A2A5C411C004FA71F /* TabPWViewController.swift */; };
 		C76D92E52A6C0B8C0088F2D5 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */; };
+		C76D92E72A6D33550088F2D5 /* ShareWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */; };
+		C76D92E92A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */; };
 		C77166862A4D654100E7F8C8 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166852A4D654100E7F8C8 /* Community.storyboard */; };
 		C77166882A4D655E00E7F8C8 /* Clothes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166872A4D655E00E7F8C8 /* Clothes.storyboard */; };
 		C771668A2A4D656800E7F8C8 /* MyHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166892A4D656800E7F8C8 /* MyHome.storyboard */; };
@@ -60,6 +62,8 @@
 		C76877682A5C4111004FA71F /* TabIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIDViewController.swift; sourceTree = "<group>"; };
 		C768776A2A5C411C004FA71F /* TabPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPWViewController.swift; sourceTree = "<group>"; };
 		C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
+		C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingViewController.swift; sourceTree = "<group>"; };
+		C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingCollectionViewCell.swift; sourceTree = "<group>"; };
 		C77166852A4D654100E7F8C8 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		C77166872A4D655E00E7F8C8 /* Clothes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clothes.storyboard; sourceTree = "<group>"; };
 		C77166892A4D656800E7F8C8 /* MyHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHome.storyboard; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				C77166852A4D654100E7F8C8 /* Community.storyboard */,
 				C7B548322A4DDE49001B3F62 /* CommunityViewController.swift */,
 				C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */,
+				C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */,
+				C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				C7B7B4B12A5FA8E500584E76 /* SettingsViewController.swift in Sources */,
 				C79B5AA62A4D605A00A8B485 /* ViewController.swift in Sources */,
 				C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */,
+				C76D92E92A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift in Sources */,
 				C7B548312A4DDD4A001B3F62 /* MainTabViewController.swift in Sources */,
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
 				C7BB294F2A67FD5D009F36F8 /* FeedShareTableViewCell.swift in Sources */,
@@ -400,6 +407,7 @@
 				C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */,
 				C79909962A5E522C00296DEC /* FindPWViewController.swift in Sources */,
 				C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */,
+				C76D92E72A6D33550088F2D5 /* ShareWritingViewController.swift in Sources */,
 				C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */,
 				C7FFB8C62A66C9DC000B7D87 /* FeedBuyViewController.swift in Sources */,
 				C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */,
