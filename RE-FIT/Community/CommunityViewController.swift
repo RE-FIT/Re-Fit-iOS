@@ -169,4 +169,10 @@ class CommunityViewController: UIViewController {
     @IBAction func Category_Tapped(_ sender: Any) {
         dropdownCategory.show()
     }
+    
+    @IBAction func Writing_Tapped(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "WritingVC") as? WritingViewController else { return }
+        
+        self.present(nextVC, animated: false)
+    }
 }

@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3533DA8163629186B18E6969 /* Pods_RE_FIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84A43E7FECEAC244D1BCF50 /* Pods_RE_FIT.framework */; };
+		C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C726406D2A713E6600CEBFFA /* WritingViewController.swift */; };
 		C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414412A57B3DE00946ECF /* LoginViewController.swift */; };
 		C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414432A5825AE00946ECF /* JoinViewController.swift */; };
 		C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414452A583B6E00946ECF /* AgreeViewController.swift */; };
 		C73F31A82A56B49800D515A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73F31A72A56B49800D515A8 /* Login.storyboard */; };
+		C7426AC62A6FEF850017371B /* DeleteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */; };
 		C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76870E72A6AAEA000022FC0 /* EmailPost.swift */; };
 		C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877642A5C3F26004FA71F /* FindViewController.swift */; };
 		C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877662A5C3FA9004FA71F /* FindTabViewController.swift */; };
@@ -52,10 +54,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C726406D2A713E6600CEBFFA /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C73414412A57B3DE00946ECF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C73414432A5825AE00946ECF /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		C73414452A583B6E00946ECF /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
 		C73F31A72A56B49800D515A8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlertViewController.swift; sourceTree = "<group>"; };
 		C76870E72A6AAEA000022FC0 /* EmailPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPost.swift; sourceTree = "<group>"; };
 		C76877642A5C3F26004FA71F /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		C76877662A5C3FA9004FA71F /* FindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTabViewController.swift; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 				C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */,
 				C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */,
 				C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */,
+				C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */,
+				C726406D2A713E6600CEBFFA /* WritingViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */,
+				C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */,
 				C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */,
 				C7B7B4AD2A5FA8CA00584E76 /* MyFeedViewController.swift in Sources */,
 				C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */,
@@ -409,6 +416,7 @@
 				C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */,
 				C76D92E72A6D33550088F2D5 /* ShareWritingViewController.swift in Sources */,
 				C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */,
+				C7426AC62A6FEF850017371B /* DeleteAlertViewController.swift in Sources */,
 				C7FFB8C62A66C9DC000B7D87 /* FeedBuyViewController.swift in Sources */,
 				C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */,
 				C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */,

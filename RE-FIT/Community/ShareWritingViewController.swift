@@ -17,7 +17,7 @@ class ShareWritingViewController: UIViewController {
     
     let dropdown = DropDown()
     
-    let Kind = [" 수정하기 ", " 삭제하기 "]
+    var Kind = [" 수정하기 ", " 삭제하기 "]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +38,18 @@ class ShareWritingViewController: UIViewController {
 
         initUI()
         setDropdown()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+            
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func initUI() {
@@ -63,6 +75,15 @@ class ShareWritingViewController: UIViewController {
         // Item 선택 시 처리
         dropdown.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
+            if index == 0 {
+                
+            } else if index == 1 {
+                guard let nextVC = self?.storyboard?.instantiateViewController(withIdentifier: "DeleteAlertVC") as? DeleteAlertViewController else { return }
+                nextVC.modalPresentationStyle = .overFullScreen
+                self?.present(nextVC, animated: false)
+            } else if index == 2 {
+                
+            }
         }
         
         // 취소 시 처리
@@ -72,5 +93,9 @@ class ShareWritingViewController: UIViewController {
 
     @IBAction func Edit_Tapped(_ sender: Any) {
         dropdown.show()
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
     }
 }
