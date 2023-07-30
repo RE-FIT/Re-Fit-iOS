@@ -25,6 +25,9 @@
 		C768F4BB2A760359004BDAB7 /* SingoRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4BA2A760359004BDAB7 /* SingoRealViewController.swift */; };
 		C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4BC2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift */; };
 		C768F4BF2A7625E8004BDAB7 /* WritingSingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4BE2A7625E8004BDAB7 /* WritingSingoViewController.swift */; };
+		C768F4C12A768AB4004BDAB7 /* WritingSingoRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4C02A768AB4004BDAB7 /* WritingSingoRealViewController.swift */; };
+		C768F4C32A768AC7004BDAB7 /* WritingSingoEtcViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4C22A768AC7004BDAB7 /* WritingSingoEtcViewController.swift */; };
+		C768F4C52A768AEC004BDAB7 /* SingoCompleteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4C42A768AEC004BDAB7 /* SingoCompleteViewController.swift */; };
 		C76D92E52A6C0B8C0088F2D5 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */; };
 		C76D92E72A6D33550088F2D5 /* ShareWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */; };
 		C76D92E92A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */; };
@@ -77,6 +80,9 @@
 		C768F4BA2A760359004BDAB7 /* SingoRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingoRealViewController.swift; sourceTree = "<group>"; };
 		C768F4BC2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingUserCollectionViewCell.swift; sourceTree = "<group>"; };
 		C768F4BE2A7625E8004BDAB7 /* WritingSingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSingoViewController.swift; sourceTree = "<group>"; };
+		C768F4C02A768AB4004BDAB7 /* WritingSingoRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSingoRealViewController.swift; sourceTree = "<group>"; };
+		C768F4C22A768AC7004BDAB7 /* WritingSingoEtcViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSingoEtcViewController.swift; sourceTree = "<group>"; };
+		C768F4C42A768AEC004BDAB7 /* SingoCompleteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingoCompleteViewController.swift; sourceTree = "<group>"; };
 		C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingViewController.swift; sourceTree = "<group>"; };
 		C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -230,6 +236,9 @@
 				C768F4B82A75FDAE004BDAB7 /* SingoAlertViewController.swift */,
 				C768F4BA2A760359004BDAB7 /* SingoRealViewController.swift */,
 				C768F4BE2A7625E8004BDAB7 /* WritingSingoViewController.swift */,
+				C768F4C02A768AB4004BDAB7 /* WritingSingoRealViewController.swift */,
+				C768F4C22A768AC7004BDAB7 /* WritingSingoEtcViewController.swift */,
+				C768F4C42A768AEC004BDAB7 /* SingoCompleteViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -416,8 +425,10 @@
 				C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */,
 				C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */,
 				C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */,
+				C768F4C32A768AC7004BDAB7 /* WritingSingoEtcViewController.swift in Sources */,
 				C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */,
 				C7B7B4AD2A5FA8CA00584E76 /* MyFeedViewController.swift in Sources */,
+				C768F4C52A768AEC004BDAB7 /* SingoCompleteViewController.swift in Sources */,
 				C768F4B92A75FDAE004BDAB7 /* SingoAlertViewController.swift in Sources */,
 				C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */,
 				C7B7B4B12A5FA8E500584E76 /* SettingsViewController.swift in Sources */,
@@ -428,6 +439,7 @@
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
 				C7BB294F2A67FD5D009F36F8 /* FeedShareTableViewCell.swift in Sources */,
 				C7B7B4B72A5FFA0200584E76 /* InfoTabViewController.swift in Sources */,
+				C768F4C12A768AB4004BDAB7 /* WritingSingoRealViewController.swift in Sources */,
 				C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */,
 				C7B7B4AF2A5FA8D400584E76 /* MyLikeViewController.swift in Sources */,
 				C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */,
