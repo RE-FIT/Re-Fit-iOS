@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3533DA8163629186B18E6969 /* Pods_RE_FIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84A43E7FECEAC244D1BCF50 /* Pods_RE_FIT.framework */; };
+		C70AE4992A7281DD00D3C251 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AE4982A7281DD00D3C251 /* PriceViewController.swift */; };
 		C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C726406D2A713E6600CEBFFA /* WritingViewController.swift */; };
 		C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414412A57B3DE00946ECF /* LoginViewController.swift */; };
 		C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414432A5825AE00946ECF /* JoinViewController.swift */; };
@@ -19,6 +20,11 @@
 		C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877662A5C3FA9004FA71F /* FindTabViewController.swift */; };
 		C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877682A5C4111004FA71F /* TabIDViewController.swift */; };
 		C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768776A2A5C411C004FA71F /* TabPWViewController.swift */; };
+		C768F4B72A75FDA1004BDAB7 /* ShareWritingUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4B62A75FDA1004BDAB7 /* ShareWritingUserViewController.swift */; };
+		C768F4B92A75FDAE004BDAB7 /* SingoAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4B82A75FDAE004BDAB7 /* SingoAlertViewController.swift */; };
+		C768F4BB2A760359004BDAB7 /* SingoRealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4BA2A760359004BDAB7 /* SingoRealViewController.swift */; };
+		C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4BC2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift */; };
+		C768F4BF2A7625E8004BDAB7 /* WritingSingoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C768F4BE2A7625E8004BDAB7 /* WritingSingoViewController.swift */; };
 		C76D92E52A6C0B8C0088F2D5 /* CommunityTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */; };
 		C76D92E72A6D33550088F2D5 /* ShareWritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */; };
 		C76D92E92A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */; };
@@ -54,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70AE4982A7281DD00D3C251 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		C726406D2A713E6600CEBFFA /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C73414412A57B3DE00946ECF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C73414432A5825AE00946ECF /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +72,11 @@
 		C76877662A5C3FA9004FA71F /* FindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTabViewController.swift; sourceTree = "<group>"; };
 		C76877682A5C4111004FA71F /* TabIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabIDViewController.swift; sourceTree = "<group>"; };
 		C768776A2A5C411C004FA71F /* TabPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabPWViewController.swift; sourceTree = "<group>"; };
+		C768F4B62A75FDA1004BDAB7 /* ShareWritingUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingUserViewController.swift; sourceTree = "<group>"; };
+		C768F4B82A75FDAE004BDAB7 /* SingoAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingoAlertViewController.swift; sourceTree = "<group>"; };
+		C768F4BA2A760359004BDAB7 /* SingoRealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingoRealViewController.swift; sourceTree = "<group>"; };
+		C768F4BC2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingUserCollectionViewCell.swift; sourceTree = "<group>"; };
+		C768F4BE2A7625E8004BDAB7 /* WritingSingoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingSingoViewController.swift; sourceTree = "<group>"; };
 		C76D92E42A6C0B8C0088F2D5 /* CommunityTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityTableViewCell.swift; sourceTree = "<group>"; };
 		C76D92E62A6D33550088F2D5 /* ShareWritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingViewController.swift; sourceTree = "<group>"; };
 		C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWritingCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -212,6 +224,12 @@
 				C76D92E82A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift */,
 				C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */,
 				C726406D2A713E6600CEBFFA /* WritingViewController.swift */,
+				C70AE4982A7281DD00D3C251 /* PriceViewController.swift */,
+				C768F4B62A75FDA1004BDAB7 /* ShareWritingUserViewController.swift */,
+				C768F4BC2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift */,
+				C768F4B82A75FDAE004BDAB7 /* SingoAlertViewController.swift */,
+				C768F4BA2A760359004BDAB7 /* SingoRealViewController.swift */,
+				C768F4BE2A7625E8004BDAB7 /* WritingSingoViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -393,10 +411,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C768F4BF2A7625E8004BDAB7 /* WritingSingoViewController.swift in Sources */,
+				C768F4B72A75FDA1004BDAB7 /* ShareWritingUserViewController.swift in Sources */,
+				C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */,
 				C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */,
 				C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */,
 				C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */,
 				C7B7B4AD2A5FA8CA00584E76 /* MyFeedViewController.swift in Sources */,
+				C768F4B92A75FDAE004BDAB7 /* SingoAlertViewController.swift in Sources */,
 				C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */,
 				C7B7B4B12A5FA8E500584E76 /* SettingsViewController.swift in Sources */,
 				C79B5AA62A4D605A00A8B485 /* ViewController.swift in Sources */,
@@ -412,11 +434,13 @@
 				C7BB29532A680B80009F36F8 /* FeedBuyTableViewCell.swift in Sources */,
 				C7B7B4B52A5FF9AD00584E76 /* ChangePWViewController.swift in Sources */,
 				C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */,
+				C70AE4992A7281DD00D3C251 /* PriceViewController.swift in Sources */,
 				C79909962A5E522C00296DEC /* FindPWViewController.swift in Sources */,
 				C7B548332A4DDE49001B3F62 /* CommunityViewController.swift in Sources */,
 				C76D92E72A6D33550088F2D5 /* ShareWritingViewController.swift in Sources */,
 				C7B778C32A4E83FC00494CEC /* APIURL.swift in Sources */,
 				C7426AC62A6FEF850017371B /* DeleteAlertViewController.swift in Sources */,
+				C768F4BB2A760359004BDAB7 /* SingoRealViewController.swift in Sources */,
 				C7FFB8C62A66C9DC000B7D87 /* FeedBuyViewController.swift in Sources */,
 				C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */,
 				C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */,

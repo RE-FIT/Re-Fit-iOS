@@ -8,7 +8,7 @@
 import UIKit
 import DropDown
 
-class WritingViewController: UIViewController {
+class WritingViewController: UIViewController, UITextViewDelegate {
     
     @IBOutlet weak var PicView1: UIView!
     @IBOutlet weak var PicView2: UIView!
@@ -57,15 +57,15 @@ class WritingViewController: UIViewController {
         ProductTextField.layer.borderWidth = 1.0
         ProductTextField.layer.masksToBounds = true
         GenderTextField.layer.cornerRadius = 10
-        GenderTextField.layer.borderColor = UIColor.white.cgColor
+        GenderTextField.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1.0).cgColor
         GenderTextField.layer.borderWidth = 1.0
         GenderTextField.layer.masksToBounds = true
         CategoryTextField.layer.cornerRadius = 10
-        CategoryTextField.layer.borderColor = UIColor.white.cgColor
+        CategoryTextField.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1.0).cgColor
         CategoryTextField.layer.borderWidth = 1.0
         CategoryTextField.layer.masksToBounds = true
         SizeTextField.layer.cornerRadius = 10
-        SizeTextField.layer.borderColor = UIColor.white.cgColor
+        SizeTextField.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1.0).cgColor
         SizeTextField.layer.borderWidth = 1.0
         SizeTextField.layer.masksToBounds = true
         HowTextField.layer.cornerRadius = 10
@@ -73,11 +73,20 @@ class WritingViewController: UIViewController {
         HowTextField.layer.borderWidth = 1.0
         HowTextField.layer.masksToBounds = true
         PriceTextField.layer.cornerRadius = 10
+        PriceTextField.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1.0).cgColor
+        PriceTextField.layer.borderWidth = 1.0
         PriceTextField.layer.masksToBounds = true
         DetailTextView.layer.cornerRadius = 10
         DetailTextView.layer.borderColor = UIColor.white.cgColor
         DetailTextView.layer.borderWidth = 1.0
         DetailTextView.layer.masksToBounds = true
+        placeholderSetting()
+        let attrString = NSMutableAttributedString(string: DetailTextView.text!)
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.lineSpacing = 10
+        textViewDidBeginEditing(DetailTextView)
+        textViewDidEndEditing(DetailTextView)
+        DetailTextView.textContainerInset = UIEdgeInsets(top: 14, left: 10, bottom: 14, right: 10)
         
         ShareButton.layer.cornerRadius = 15
         ShareButton.layer.masksToBounds = true
@@ -94,10 +103,60 @@ class WritingViewController: UIViewController {
         setDropdownHow()
     }
     
+    @IBAction func Share_Tapped(_ sender: Any) {
+        if (ShareButton.configuration?.baseForegroundColor == UIColor.white) {
+            ShareButton.isSelected = false
+            ShareButton.configuration?.baseForegroundColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
+            ShareButton.backgroundColor = UIColor.white
+            ShareButton.tintColor = .clear
+        } else {
+            ShareButton.isSelected = true
+            ShareButton.configuration?.baseForegroundColor = UIColor.white
+            ShareButton.backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            ShareButton.tintColor = .clear
+        }
+    }
+    
+    @IBAction func Sell_Tapped(_ sender: Any) {
+        if (SellButton.configuration?.baseForegroundColor == UIColor.white) {
+            SellButton.isSelected = false
+            SellButton.configuration?.baseForegroundColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
+            SellButton.backgroundColor = UIColor.white
+            SellButton.tintColor = .clear
+        } else {
+            SellButton.isSelected = true
+            SellButton.configuration?.baseForegroundColor = UIColor.white
+            SellButton.backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            SellButton.tintColor = .clear
+        }
+    }
+    
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        if textView.textColor == UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0) {
+            textView.text = nil
+            textView.textColor = UIColor.black
+        }
+    }
+        // TextView Place Holder
+    func textViewDidEndEditing(_ textView: UITextView) {
+        if textView.text.isEmpty {
+            textView.text = "                                                                                                    옷과 자신의 키 등에 대한 정보를 상세하게                                              적을수록 많은 분들이 관심을 가지니,                                                    최대한 자세하게 작성 부탁드려요:)                                                 (판매 금지 물품은 게시가 제한될 수 있음을 알립니다)"
+            textView.textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
+        }
+        textView.layer.borderColor = UIColor.white.cgColor
+    }
+    
+    func placeholderSetting() {
+        DetailTextView.delegate = self
+        DetailTextView.text = "                                                                                                    옷과 자신의 키 등에 대한 정보를 상세하게                                              적을수록 많은 분들이 관심을 가지니,                                                    최대한 자세하게 작성 부탁드려요:)                                                 (판매 금지 물품은 게시가 제한될 수 있음을 알립니다)"
+        DetailTextView.font = UIFont(name: "AppleSDGothicNeo-Regular", size: 12.0)
+        DetailTextView.textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
+    }
+    
     func initUIGender() {
-        DropDown.appearance().textColor = UIColor.white // 아이템 텍스트 색상
+        DropDown.appearance().textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0) // 아이템 텍스트 색상
         DropDown.appearance().selectedTextColor = UIColor.black // 선택된 아이템 텍스트 색상
-        DropDown.appearance().backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 아이템 팝업 배경 색상
+        DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(10)
         dropdownGender.dismissMode = .automatic // 팝업을 닫을 모드 설정
@@ -105,9 +164,9 @@ class WritingViewController: UIViewController {
     }
     
     func initUICategory() {
-        DropDown.appearance().textColor = UIColor.white // 아이템 텍스트 색상
+        DropDown.appearance().textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0) // 아이템 텍스트 색상
         DropDown.appearance().selectedTextColor = UIColor.black // 선택된 아이템 텍스트 색상
-        DropDown.appearance().backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 아이템 팝업 배경 색상
+        DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(10)
         dropdownCategory.dismissMode = .automatic // 팝업을 닫을 모드 설정
@@ -115,9 +174,9 @@ class WritingViewController: UIViewController {
     }
     
     func initUISize() {
-        DropDown.appearance().textColor = UIColor.white // 아이템 텍스트 색상
+        DropDown.appearance().textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0) // 아이템 텍스트 색상
         DropDown.appearance().selectedTextColor = UIColor.black // 선택된 아이템 텍스트 색상
-        DropDown.appearance().backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 아이템 팝업 배경 색상
+        DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(10)
         dropdownSize.dismissMode = .automatic // 팝업을 닫을 모드 설정
@@ -125,9 +184,9 @@ class WritingViewController: UIViewController {
     }
     
     func initUIHow() {
-        DropDown.appearance().textColor = UIColor.white // 아이템 텍스트 색상
+        DropDown.appearance().textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0) // 아이템 텍스트 색상
         DropDown.appearance().selectedTextColor = UIColor.black // 선택된 아이템 텍스트 색상
-        DropDown.appearance().backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 아이템 팝업 배경 색상
+        DropDown.appearance().backgroundColor = UIColor.white // 아이템 팝업 배경 색상
         DropDown.appearance().selectionBackgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1) // 선택한 아이템 배경 색상
         DropDown.appearance().setupCornerRadius(10)
         dropdownHow.dismissMode = .automatic // 팝업을 닫을 모드 설정
@@ -148,6 +207,10 @@ class WritingViewController: UIViewController {
         dropdownGender.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.GenderTextField.text = " \(item)"
+            self!.GenderTextField.textColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            self!.GenderTextField.layer.borderColor = UIColor.white.cgColor
+            self!.GenderTextField.layer.borderWidth = 1.0
+            self!.GenderTextField.layer.masksToBounds = true
         }
         
         // 취소 시 처리
@@ -169,6 +232,10 @@ class WritingViewController: UIViewController {
         dropdownCategory.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.CategoryTextField.text = " \(item)"
+            self!.CategoryTextField.textColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            self!.CategoryTextField.layer.borderColor = UIColor.white.cgColor
+            self!.CategoryTextField.layer.borderWidth = 1.0
+            self!.CategoryTextField.layer.masksToBounds = true
         }
         
         // 취소 시 처리
@@ -190,6 +257,10 @@ class WritingViewController: UIViewController {
         dropdownSize.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.SizeTextField.text = " \(item)"
+            self!.SizeTextField.textColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            self!.SizeTextField.layer.borderColor = UIColor.white.cgColor
+            self!.SizeTextField.layer.borderWidth = 1.0
+            self!.SizeTextField.layer.masksToBounds = true
         }
         
         // 취소 시 처리
@@ -211,6 +282,10 @@ class WritingViewController: UIViewController {
         dropdownHow.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.HowTextField.text = " \(item)"
+            self!.HowTextField.textColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            self!.HowTextField.layer.borderColor = UIColor.white.cgColor
+            self!.HowTextField.layer.borderWidth = 1.0
+            self!.HowTextField.layer.masksToBounds = true
         }
         
         // 취소 시 처리
@@ -232,5 +307,11 @@ class WritingViewController: UIViewController {
     
     @IBAction func How_Tapped(_ sender: Any) {
         dropdownHow.show()
+    }
+
+    @IBAction func Insert_Price(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "PriceVC") as? PriceViewController else { return }
+        nextVC.modalPresentationStyle = .overFullScreen
+        self.present(nextVC, animated: false)
     }
 }

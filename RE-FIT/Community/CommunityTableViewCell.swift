@@ -24,7 +24,7 @@ class CommunityTableViewCell: UITableViewCell {
 extension CommunityViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ShareWritingVC") as? ShareWritingViewController else { return }
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ShareWritingUserVC") as? ShareWritingUserViewController else { return }
         
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
