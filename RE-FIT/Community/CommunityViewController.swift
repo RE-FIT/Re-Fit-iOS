@@ -20,9 +20,9 @@ class CommunityViewController: UIViewController {
     let dropdownGender = DropDown()
     let dropdownCategory = DropDown()
     
-    let Kind = ["나눔", "판매"]
-    let Gender = ["남성복", " 여성복"]
-    let Category = ["상의", "하의", "아우터", "원피스", "신발", "액세서리"]
+    let Kind = [" 나눔", " 판매"]
+    let Gender = [" 남성복", " 여성복"]
+    let Category = [" 상의", " 하의", " 아우터", " 원피스", " 신발", " 액세서리"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
