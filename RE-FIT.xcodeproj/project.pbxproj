@@ -57,6 +57,7 @@
 		C7BB294F2A67FD5D009F36F8 /* FeedShareTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB294E2A67FD5D009F36F8 /* FeedShareTableViewCell.swift */; };
 		C7BB29512A680B74009F36F8 /* FeedSellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB29502A680B74009F36F8 /* FeedSellTableViewCell.swift */; };
 		C7BB29532A680B80009F36F8 /* FeedBuyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB29522A680B80009F36F8 /* FeedBuyTableViewCell.swift */; };
+		C7D1A1B52A792777004D3D58 /* ClothesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */; };
 		C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */; };
 		C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */; };
 		C7FFB8C62A66C9DC000B7D87 /* FeedBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C52A66C9DC000B7D87 /* FeedBuyViewController.swift */; };
@@ -114,6 +115,7 @@
 		C7BB294E2A67FD5D009F36F8 /* FeedShareTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedShareTableViewCell.swift; sourceTree = "<group>"; };
 		C7BB29502A680B74009F36F8 /* FeedSellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSellTableViewCell.swift; sourceTree = "<group>"; };
 		C7BB29522A680B80009F36F8 /* FeedBuyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBuyTableViewCell.swift; sourceTree = "<group>"; };
+		C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSellViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedShareViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C52A66C9DC000B7D87 /* FeedBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBuyViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +251,7 @@
 				C78C5DE72A6A02D3000B5EEC /* ClothesAPI */,
 				C77166872A4D655E00E7F8C8 /* Clothes.storyboard */,
 				C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */,
+				C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */,
 			);
 			path = Clothes;
 			sourceTree = "<group>";
@@ -439,6 +442,7 @@
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
 				C7BB294F2A67FD5D009F36F8 /* FeedShareTableViewCell.swift in Sources */,
 				C7B7B4B72A5FFA0200584E76 /* InfoTabViewController.swift in Sources */,
+				C7D1A1B52A792777004D3D58 /* ClothesCollectionViewCell.swift in Sources */,
 				C768F4C12A768AB4004BDAB7 /* WritingSingoRealViewController.swift in Sources */,
 				C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */,
 				C7B7B4AF2A5FA8D400584E76 /* MyLikeViewController.swift in Sources */,

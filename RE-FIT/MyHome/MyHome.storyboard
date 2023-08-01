@@ -20,13 +20,13 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="265"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MY PAGE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKZ-WU-6LX">
-                                        <rect key="frame" x="147" y="62" width="99" height="29"/>
+                                        <rect key="frame" x="147" y="57" width="99" height="29"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3tI-eO-pet">
-                                        <rect key="frame" x="142" y="101" width="109" height="109"/>
+                                        <rect key="frame" x="142" y="96" width="109" height="109"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Character" translatesAutoresizingMaskIntoConstraints="NO" id="4I0-Wp-Sgf">
                                                 <rect key="frame" x="33" y="25.666666666666671" width="43" height="58"/>
@@ -45,13 +45,13 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ansrud" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EvI-jP-W7e">
-                                        <rect key="frame" x="173.66666666666666" y="216" width="46" height="20"/>
+                                        <rect key="frame" x="173.66666666666666" y="211" width="46" height="20"/>
                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="16"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y81-ZL-uCD">
-                                        <rect key="frame" x="83" y="242" width="227" height="91"/>
+                                        <rect key="frame" x="83" y="237" width="227" height="91"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="환경지키기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwO-Kz-5fD">
                                                 <rect key="frame" x="83.333333333333343" y="16" width="60.666666666666657" height="17"/>
@@ -166,7 +166,7 @@
                                     <constraint firstItem="OKZ-WU-6LX" firstAttribute="centerX" secondItem="Iwn-vu-mxg" secondAttribute="centerX" id="W9t-zd-Ffo"/>
                                     <constraint firstItem="3tI-eO-pet" firstAttribute="centerX" secondItem="Iwn-vu-mxg" secondAttribute="centerX" id="bke-VB-K7s"/>
                                     <constraint firstItem="Y81-ZL-uCD" firstAttribute="top" secondItem="EvI-jP-W7e" secondAttribute="bottom" constant="6" id="c3b-ou-yoT"/>
-                                    <constraint firstItem="OKZ-WU-6LX" firstAttribute="top" secondItem="Iwn-vu-mxg" secondAttribute="top" constant="62" id="cgU-85-PLv"/>
+                                    <constraint firstItem="OKZ-WU-6LX" firstAttribute="top" secondItem="Iwn-vu-mxg" secondAttribute="top" constant="57" id="cgU-85-PLv"/>
                                     <constraint firstItem="EvI-jP-W7e" firstAttribute="centerX" secondItem="Iwn-vu-mxg" secondAttribute="centerX" id="wRF-FY-b1J"/>
                                 </constraints>
                             </view>
@@ -1609,7 +1609,7 @@
         <image name="Next_Icon" width="8" height="14"/>
         <image name="Setting_Icon" width="19" height="20"/>
         <image name="Undo_Icon" width="12" height="13"/>
-        <image name="Warning_Icon" width="20.5" height="20.5"/>
+        <image name="Warning_Icon" width="18" height="18"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
