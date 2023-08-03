@@ -15,6 +15,7 @@
 		C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414452A583B6E00946ECF /* AgreeViewController.swift */; };
 		C73F31A82A56B49800D515A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73F31A72A56B49800D515A8 /* Login.storyboard */; };
 		C7426AC62A6FEF850017371B /* DeleteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */; };
+		C751C4722A7A840300616256 /* EnrollClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751C4712A7A840300616256 /* EnrollClothesViewController.swift */; };
 		C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76870E72A6AAEA000022FC0 /* EmailPost.swift */; };
 		C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877642A5C3F26004FA71F /* FindViewController.swift */; };
 		C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877662A5C3FA9004FA71F /* FindTabViewController.swift */; };
@@ -58,6 +59,7 @@
 		C7BB29512A680B74009F36F8 /* FeedSellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB29502A680B74009F36F8 /* FeedSellTableViewCell.swift */; };
 		C7BB29532A680B80009F36F8 /* FeedBuyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB29522A680B80009F36F8 /* FeedBuyTableViewCell.swift */; };
 		C7D1A1B52A792777004D3D58 /* ClothesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */; };
+		C7F3A51B2A7BD86800062E14 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */; };
 		C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */; };
 		C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */; };
 		C7FFB8C62A66C9DC000B7D87 /* FeedBuyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C52A66C9DC000B7D87 /* FeedBuyViewController.swift */; };
@@ -71,6 +73,7 @@
 		C73414452A583B6E00946ECF /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
 		C73F31A72A56B49800D515A8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlertViewController.swift; sourceTree = "<group>"; };
+		C751C4712A7A840300616256 /* EnrollClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollClothesViewController.swift; sourceTree = "<group>"; };
 		C76870E72A6AAEA000022FC0 /* EmailPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPost.swift; sourceTree = "<group>"; };
 		C76877642A5C3F26004FA71F /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		C76877662A5C3FA9004FA71F /* FindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTabViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 		C7BB29502A680B74009F36F8 /* FeedSellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSellTableViewCell.swift; sourceTree = "<group>"; };
 		C7BB29522A680B80009F36F8 /* FeedBuyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBuyTableViewCell.swift; sourceTree = "<group>"; };
 		C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesCollectionViewCell.swift; sourceTree = "<group>"; };
+		C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSellViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedShareViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C52A66C9DC000B7D87 /* FeedBuyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBuyViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 				C77166872A4D655E00E7F8C8 /* Clothes.storyboard */,
 				C7B548342A4DDE75001B3F62 /* ClothesViewController.swift */,
 				C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */,
+				C751C4712A7A840300616256 /* EnrollClothesViewController.swift */,
+				C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */,
 			);
 			path = Clothes;
 			sourceTree = "<group>";
@@ -446,6 +452,7 @@
 				C768F4C12A768AB4004BDAB7 /* WritingSingoRealViewController.swift in Sources */,
 				C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */,
 				C7B7B4AF2A5FA8D400584E76 /* MyLikeViewController.swift in Sources */,
+				C7F3A51B2A7BD86800062E14 /* CancelAlertViewController.swift in Sources */,
 				C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */,
 				C7BB29532A680B80009F36F8 /* FeedBuyTableViewCell.swift in Sources */,
 				C7B7B4B52A5FF9AD00584E76 /* ChangePWViewController.swift in Sources */,
@@ -464,6 +471,7 @@
 				C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */,
 				C7B548372A4DDE9E001B3F62 /* MyHomeViewController.swift in Sources */,
 				C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */,
+				C751C4722A7A840300616256 /* EnrollClothesViewController.swift in Sources */,
 				C7B7B4AB2A5FA8BC00584E76 /* MyInfoViewController.swift in Sources */,
 				C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */,
 				C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */,

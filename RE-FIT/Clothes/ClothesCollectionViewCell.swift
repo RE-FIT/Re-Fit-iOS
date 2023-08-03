@@ -10,6 +10,9 @@ import UIKit
 class ClothesCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var DayView: UIView!
+    @IBOutlet weak var ClothesImage: UIImageView!
+    @IBOutlet weak var ClothesProgress: UIProgressView!
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +26,12 @@ class ClothesCollectionViewCell: UICollectionViewCell {
         DayView.layer.cornerRadius = 15
         DayView.layer.masksToBounds = false
         DayView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
+        
+        ClothesImage.layer.cornerRadius = 10
+        ClothesImage.layer.masksToBounds = true
+        
+        ClothesProgress.layer.cornerRadius = 5
+        ClothesProgress.clipsToBounds = true
     }
     
 }
