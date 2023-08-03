@@ -29,7 +29,6 @@ class ClothesViewController: UIViewController {
     @IBOutlet weak var SortTextField: UITextField!
     @IBOutlet weak var ClothesCV: UICollectionView!
     
-    
     let dropdownSeason = DropDown()
     let dropdownSort = DropDown()
     
@@ -49,6 +48,22 @@ class ClothesViewController: UIViewController {
         SortTextField.layer.borderColor = UIColor.white.cgColor
         SortTextField.layer.borderWidth = 1.0
         SortTextField.layer.masksToBounds = true
+        
+        TopView.layer.cornerRadius = self.TopView.frame.size.height / 2
+        TopView.layer.masksToBounds = true
+        TopView.clipsToBounds = true
+        BottomView.layer.cornerRadius = self.BottomView.frame.size.height / 2
+        BottomView.layer.masksToBounds = true
+        BottomView.clipsToBounds = true
+        OuterView.layer.cornerRadius = self.OuterView.frame.size.height / 2
+        OuterView.layer.masksToBounds = true
+        OuterView.clipsToBounds = true
+        OnepieceView.layer.cornerRadius = self.OnepieceView.frame.size.height / 2
+        OnepieceView.layer.masksToBounds = true
+        OnepieceView.clipsToBounds = true
+        ShoeView.layer.cornerRadius = self.ShoeView.frame.size.height / 2
+        ShoeView.layer.masksToBounds = true
+        ShoeView.clipsToBounds = true
         
         self.ClothesCV.delegate = self
         self.ClothesCV.dataSource = self
@@ -127,5 +142,11 @@ class ClothesViewController: UIViewController {
     
     @IBAction func Sort_Tapped(_ sender: Any) {
         dropdownSort.show()
+    }
+    
+    @IBAction func Enroll_Clothes(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "EnrollClothesVC") as? EnrollClothesViewController else { return }
+
+        self.navigationController?.pushViewController(nextVC, animated: false)
     }
 }
