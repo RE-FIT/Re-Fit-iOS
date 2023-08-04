@@ -88,6 +88,11 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         textViewDidEndEditing(DetailTextView)
         DetailTextView.textContainerInset = UIEdgeInsets(top: 14, left: 10, bottom: 14, right: 10)
         
+        GenderTextField.isEnabled = false
+        CategoryTextField.isEnabled = false
+        SizeTextField.isEnabled = false
+        HowTextField.isEnabled = false
+        
         ShareButton.layer.cornerRadius = 15
         ShareButton.layer.masksToBounds = true
         SellButton.layer.cornerRadius = 15

@@ -49,6 +49,9 @@ class ClothesViewController: UIViewController {
         SortTextField.layer.borderWidth = 1.0
         SortTextField.layer.masksToBounds = true
         
+        SeasonTextField.isEnabled = false
+        SortTextField.isEnabled = false
+        
         TopView.layer.cornerRadius = self.TopView.frame.size.height / 2
         TopView.layer.masksToBounds = true
         TopView.clipsToBounds = true
