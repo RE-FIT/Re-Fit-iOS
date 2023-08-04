@@ -39,9 +39,8 @@ class CancelAlertViewController: UIViewController {
     }
     
     @IBAction func YesButton(_ sender: Any) {
-//        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ClothesVC") as? ClothesViewController else { return }
-//
-//        self.navigationController?.pushViewController(nextVC, animated: true)
+        NotificationCenter.default.post(name: NSNotification.Name("DismissDetailView10"), object: nil, userInfo: nil)
+        self.presentingViewController?.dismiss(animated: false, completion: nil)
     }
     
     @IBAction func backButton(_ sender: Any) {

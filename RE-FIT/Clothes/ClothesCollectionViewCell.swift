@@ -23,7 +23,7 @@ class ClothesCollectionViewCell: UICollectionViewCell {
         layer.cornerRadius = 15
         layer.masksToBounds = false
         
-        DayView.layer.cornerRadius = 15
+        DayView.layer.cornerRadius = 12
         DayView.layer.masksToBounds = false
         DayView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
         
