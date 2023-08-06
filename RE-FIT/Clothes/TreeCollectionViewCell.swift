@@ -1,51 +1,26 @@
 //
-//  ClothesCollectionViewCell.swift
+//  TreeCollectionViewCell.swift
 //  RE-FIT
 //
-//  Created by jaegu park on 1/08/23.
+//  Created by jaegu park on 6/08/23.
 //
 
 import UIKit
 
-class ClothesCollectionViewCell: UICollectionViewCell {
-    
-    @IBOutlet weak var DayView: UIView!
-    @IBOutlet weak var ClothesImage: UIImageView!
-    @IBOutlet weak var ClothesProgress: UIProgressView!
-    
+class TreeCollectionViewCell: UICollectionViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
         contentView.layer.cornerRadius = 15
         contentView.layer.masksToBounds = true
-        
-        layer.cornerRadius = 15
-        layer.masksToBounds = false
-        
-        DayView.layer.cornerRadius = 12
-        DayView.layer.masksToBounds = false
-        DayView.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMaxYCorner]
-        
-        ClothesImage.layer.cornerRadius = 10
-        ClothesImage.layer.masksToBounds = true
-        
-        ClothesProgress.layer.cornerRadius = 5
-        ClothesProgress.clipsToBounds = true
     }
-    
 }
 
-extension ClothesViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "SelectClothesVC") as? SelectClothesViewController else { return }
-        nextVC.modalPresentationStyle = .overFullScreen
-        self.present(nextVC, animated: false)
-    }
+extension TreeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -58,7 +33,7 @@ extension ClothesViewController: UICollectionViewDelegate, UICollectionViewDataS
 //        let cellWidth = (width - widthPadding) / itemsPerRow
 //        let cellHeight = (height - heightPadding) / itemsPerColumn
         
-        return CGSize(width: 168, height: 145)
+        return CGSize(width: 90, height: 100)
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -68,13 +43,13 @@ extension ClothesViewController: UICollectionViewDelegate, UICollectionViewDataS
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return sectionInsets
     }
-        
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return sectionInsets.left
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: ClothesCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Clothes_CollectionViewCell", for: indexPath) as! ClothesCollectionViewCell
+        let cell: TreeCollectionViewCell = collectionView.dequeueReusableCell(withReuseIdentifier: "Tree_CollectionViewCell", for: indexPath) as! TreeCollectionViewCell
         
         return cell
     }

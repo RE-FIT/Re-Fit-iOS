@@ -65,4 +65,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.navigationController?.pushViewController(rvc, animated: true)
     }
+    
+    @IBAction func LoginButton(_ sender: Any) {
+        guard let svc1 = self.storyboard?.instantiateViewController(identifier: "NoAccountAlertVC") as? NoAccountAlertViewController else {
+            return
+        }
+        svc1.modalPresentationStyle = .overFullScreen
+        self.present(svc1, animated: false)
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: { _ in svc1.dismiss(animated: false)} )
+    }
 }
