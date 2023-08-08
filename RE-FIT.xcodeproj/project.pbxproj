@@ -16,6 +16,12 @@
 		C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414412A57B3DE00946ECF /* LoginViewController.swift */; };
 		C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414432A5825AE00946ECF /* JoinViewController.swift */; };
 		C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73414452A583B6E00946ECF /* AgreeViewController.swift */; };
+		C73CAF5B2A82627A0090E0FD /* StartPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CAF5A2A82627A0090E0FD /* StartPageViewController.swift */; };
+		C73CAF5D2A82628E0090E0FD /* MockUpOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CAF5C2A82628E0090E0FD /* MockUpOneViewController.swift */; };
+		C73CAF5F2A8262980090E0FD /* MockUpTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CAF5E2A8262980090E0FD /* MockUpTwoViewController.swift */; };
+		C73CAF612A8262A20090E0FD /* MockUpThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CAF602A8262A20090E0FD /* MockUpThreeViewController.swift */; };
+		C73CAF632A8262AC0090E0FD /* MockUpFourViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CAF622A8262AC0090E0FD /* MockUpFourViewController.swift */; };
+		C73CAF652A8262C60090E0FD /* MockUpFiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73CAF642A8262C60090E0FD /* MockUpFiveViewController.swift */; };
 		C73F31A82A56B49800D515A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73F31A72A56B49800D515A8 /* Login.storyboard */; };
 		C7426AC62A6FEF850017371B /* DeleteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */; };
 		C751C4722A7A840300616256 /* EnrollClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751C4712A7A840300616256 /* EnrollClothesViewController.swift */; };
@@ -82,6 +88,12 @@
 		C73414412A57B3DE00946ECF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C73414432A5825AE00946ECF /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		C73414452A583B6E00946ECF /* AgreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeViewController.swift; sourceTree = "<group>"; };
+		C73CAF5A2A82627A0090E0FD /* StartPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPageViewController.swift; sourceTree = "<group>"; };
+		C73CAF5C2A82628E0090E0FD /* MockUpOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpOneViewController.swift; sourceTree = "<group>"; };
+		C73CAF5E2A8262980090E0FD /* MockUpTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpTwoViewController.swift; sourceTree = "<group>"; };
+		C73CAF602A8262A20090E0FD /* MockUpThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpThreeViewController.swift; sourceTree = "<group>"; };
+		C73CAF622A8262AC0090E0FD /* MockUpFourViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpFourViewController.swift; sourceTree = "<group>"; };
+		C73CAF642A8262C60090E0FD /* MockUpFiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockUpFiveViewController.swift; sourceTree = "<group>"; };
 		C73F31A72A56B49800D515A8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlertViewController.swift; sourceTree = "<group>"; };
 		C751C4712A7A840300616256 /* EnrollClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollClothesViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +173,12 @@
 			children = (
 				C78C5DE92A6A02E6000B5EEC /* LoginAPI */,
 				C73F31A72A56B49800D515A8 /* Login.storyboard */,
+				C73CAF5A2A82627A0090E0FD /* StartPageViewController.swift */,
+				C73CAF5C2A82628E0090E0FD /* MockUpOneViewController.swift */,
+				C73CAF5E2A8262980090E0FD /* MockUpTwoViewController.swift */,
+				C73CAF602A8262A20090E0FD /* MockUpThreeViewController.swift */,
+				C73CAF622A8262AC0090E0FD /* MockUpFourViewController.swift */,
+				C73CAF642A8262C60090E0FD /* MockUpFiveViewController.swift */,
 				C73414412A57B3DE00946ECF /* LoginViewController.swift */,
 				C73414432A5825AE00946ECF /* JoinViewController.swift */,
 				C73414452A583B6E00946ECF /* AgreeViewController.swift */,
@@ -453,8 +471,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73CAF632A8262AC0090E0FD /* MockUpFourViewController.swift in Sources */,
 				C768F4BF2A7625E8004BDAB7 /* WritingSingoViewController.swift in Sources */,
 				C768F4B72A75FDA1004BDAB7 /* ShareWritingUserViewController.swift in Sources */,
+				C73CAF5D2A82628E0090E0FD /* MockUpOneViewController.swift in Sources */,
 				C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */,
 				C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */,
 				C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */,
@@ -469,6 +489,7 @@
 				C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */,
 				C76D92E92A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift in Sources */,
 				C7B548312A4DDD4A001B3F62 /* MainTabViewController.swift in Sources */,
+				C73CAF5B2A82627A0090E0FD /* StartPageViewController.swift in Sources */,
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
 				C7BB294F2A67FD5D009F36F8 /* FeedShareTableViewCell.swift in Sources */,
 				C7B7B4B72A5FFA0200584E76 /* InfoTabViewController.swift in Sources */,
@@ -495,12 +516,15 @@
 				C7FFB8C62A66C9DC000B7D87 /* FeedBuyViewController.swift in Sources */,
 				C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */,
 				C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */,
+				C73CAF652A8262C60090E0FD /* MockUpFiveViewController.swift in Sources */,
 				C7B548352A4DDE75001B3F62 /* ClothesViewController.swift in Sources */,
 				C7B3C2EA2A7E7239005E2E5A /* SelectClothesViewController.swift in Sources */,
 				C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */,
 				C7B548372A4DDE9E001B3F62 /* MyHomeViewController.swift in Sources */,
+				C73CAF612A8262A20090E0FD /* MockUpThreeViewController.swift in Sources */,
 				C732F6DF2A7FAD4500C26F97 /* NoAccountAlertViewController.swift in Sources */,
 				C73414462A583B6E00946ECF /* AgreeViewController.swift in Sources */,
+				C73CAF5F2A8262980090E0FD /* MockUpTwoViewController.swift in Sources */,
 				C751C4722A7A840300616256 /* EnrollClothesViewController.swift in Sources */,
 				C7B7B4AB2A5FA8BC00584E76 /* MyInfoViewController.swift in Sources */,
 				C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */,
