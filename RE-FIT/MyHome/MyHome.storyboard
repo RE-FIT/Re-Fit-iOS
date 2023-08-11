@@ -780,6 +780,96 @@
             </objects>
             <point key="canvasLocation" x="3676" y="-2250"/>
         </scene>
+        <!--Image Enroll Alert View Controller-->
+        <scene sceneID="MZb-74-Ygt">
+            <objects>
+                <viewController storyboardIdentifier="ImageEnrollAlertVC" id="9qb-qk-3md" customClass="ImageEnrollAlertViewController" customModule="RE_FIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ycq-L9-bhl">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-K1-hjI">
+                                <rect key="frame" x="40" y="100" width="313" height="213"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="프로필 사진 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5LN-Vf-J1j">
+                                        <rect key="frame" x="90.666666666666657" y="40" width="132" height="24"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AjJ-p7-k3m">
+                                        <rect key="frame" x="273" y="5" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="51y-f4-aiK"/>
+                                            <constraint firstAttribute="width" constant="35" id="KzI-2U-Wac"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Undo_Big"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="9qb-qk-3md" eventType="touchUpInside" id="vkk-9H-j6Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fkQ-kQ-WGC">
+                                        <rect key="frame" x="30" y="100" width="253" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="bCx-CN-I2e"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="앨범에서 선택">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="Select_Album:" destination="9qb-qk-3md" eventType="touchUpInside" id="3yU-g8-TA0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYg-4P-hZi">
+                                        <rect key="frame" x="30" y="154" width="253" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="9fB-sK-oSH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="사진 삭제">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="213" id="BlB-Zt-9li"/>
+                                    <constraint firstAttribute="trailing" secondItem="AjJ-p7-k3m" secondAttribute="trailing" constant="5" id="GDz-pj-Oso"/>
+                                    <constraint firstItem="fkQ-kQ-WGC" firstAttribute="leading" secondItem="bNY-K1-hjI" secondAttribute="leading" constant="30" id="Hco-pH-nCE"/>
+                                    <constraint firstItem="fkQ-kQ-WGC" firstAttribute="top" secondItem="5LN-Vf-J1j" secondAttribute="bottom" constant="36" id="NYv-Op-74Q"/>
+                                    <constraint firstAttribute="trailing" secondItem="fkQ-kQ-WGC" secondAttribute="trailing" constant="30" id="Pdy-Za-n8G"/>
+                                    <constraint firstItem="bYg-4P-hZi" firstAttribute="leading" secondItem="bNY-K1-hjI" secondAttribute="leading" constant="30" id="X54-cp-qbz"/>
+                                    <constraint firstAttribute="trailing" secondItem="bYg-4P-hZi" secondAttribute="trailing" constant="30" id="fkM-Fs-sxn"/>
+                                    <constraint firstItem="5LN-Vf-J1j" firstAttribute="top" secondItem="bNY-K1-hjI" secondAttribute="top" constant="40" id="iuK-Fp-7zd"/>
+                                    <constraint firstItem="AjJ-p7-k3m" firstAttribute="top" secondItem="bNY-K1-hjI" secondAttribute="top" constant="5" id="m2D-RF-Zpg"/>
+                                    <constraint firstItem="bYg-4P-hZi" firstAttribute="top" secondItem="fkQ-kQ-WGC" secondAttribute="bottom" constant="12" id="s1h-X1-Ot6"/>
+                                    <constraint firstItem="5LN-Vf-J1j" firstAttribute="centerX" secondItem="bNY-K1-hjI" secondAttribute="centerX" id="zka-3e-fAr"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lza-ub-uJO"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20098917373758279" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lza-ub-uJO" firstAttribute="trailing" secondItem="bNY-K1-hjI" secondAttribute="trailing" constant="40" id="1au-z8-wy6"/>
+                            <constraint firstItem="bNY-K1-hjI" firstAttribute="top" secondItem="ycq-L9-bhl" secondAttribute="top" constant="100" id="aLM-vF-epr"/>
+                            <constraint firstItem="bNY-K1-hjI" firstAttribute="leading" secondItem="lza-ub-uJO" secondAttribute="leading" constant="40" id="zFd-tJ-fkW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AlbumButton" destination="fkQ-kQ-WGC" id="qms-3E-1nA"/>
+                        <outlet property="DeleteButton" destination="bYg-4P-hZi" id="HTc-n9-MEh"/>
+                        <outlet property="EnrollView" destination="bNY-K1-hjI" id="iGH-zD-dyN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Ii-Ts-4LZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4367" y="-2250"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="bvE-Ho-SP6">
             <objects>
@@ -859,7 +949,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C7G-Og-Ccv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4374.8091603053435" y="-2250"/>
+            <point key="canvasLocation" x="5050" y="-2250"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="06J-YC-8do">
@@ -915,7 +1005,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="efj-sC-aPh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5071" y="-2250"/>
+            <point key="canvasLocation" x="5744" y="-2250"/>
         </scene>
         <!--Edit Profile View Controller-->
         <scene sceneID="Xbh-a0-bBK">
@@ -928,17 +1018,31 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IrR-kP-Pfm">
                                 <rect key="frame" x="142" y="50" width="109" height="109"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Character" translatesAutoresizingMaskIntoConstraints="NO" id="yxg-zR-jrf">
-                                        <rect key="frame" x="21.666666666666657" y="21.666666666666671" width="66" height="66"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Character" translatesAutoresizingMaskIntoConstraints="NO" id="yxg-zR-jrf">
+                                        <rect key="frame" x="33" y="25.666666666666671" width="43" height="58"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="66" id="MAU-NU-TiZ"/>
-                                            <constraint firstAttribute="width" constant="66" id="dtb-6G-rA0"/>
+                                            <constraint firstAttribute="height" constant="58" id="MAU-NU-TiZ"/>
+                                            <constraint firstAttribute="width" constant="43" id="dtb-6G-rA0"/>
                                         </constraints>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OvW-uI-Y7M">
+                                        <rect key="frame" x="79" y="79" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="0Du-Uh-BoP"/>
+                                            <constraint firstAttribute="height" constant="25" id="nhc-pa-32K"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Put_Image"/>
+                                        <connections>
+                                            <action selector="Camera_Tapped:" destination="UPq-aJ-PaX" eventType="touchUpInside" id="nsh-r1-ube"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="OvW-uI-Y7M" secondAttribute="trailing" constant="5" id="AuI-3a-SsL"/>
                                     <constraint firstItem="yxg-zR-jrf" firstAttribute="centerY" secondItem="IrR-kP-Pfm" secondAttribute="centerY" id="BfU-Ss-NAp"/>
+                                    <constraint firstAttribute="bottom" secondItem="OvW-uI-Y7M" secondAttribute="bottom" constant="5" id="G4g-LV-Qzo"/>
                                     <constraint firstItem="yxg-zR-jrf" firstAttribute="centerX" secondItem="IrR-kP-Pfm" secondAttribute="centerX" id="QxU-tA-FnO"/>
                                     <constraint firstAttribute="width" constant="109" id="S93-zc-BkA"/>
                                     <constraint firstAttribute="height" constant="109" id="dC9-jo-7rq"/>
@@ -1234,7 +1338,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umc-k5-day" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4376.3358778625952" y="-1599.2957746478874"/>
+            <point key="canvasLocation" x="5050" y="-1599"/>
         </scene>
         <!--Feed Buy View Controller-->
         <scene sceneID="ZkC-6o-soR">
@@ -1607,9 +1711,14 @@
         <image name="Info_Warning" width="20" height="20"/>
         <image name="Like_Icon" width="20" height="18.5"/>
         <image name="Next_Icon" width="8" height="14"/>
+        <image name="Put_Image" width="27" height="27"/>
         <image name="Setting_Icon" width="19" height="20"/>
+        <image name="Undo_Big" width="15" height="15"/>
         <image name="Undo_Icon" width="12" height="13"/>
         <image name="Warning_Icon" width="18" height="18"/>
+        <namedColor name="MainColor">
+            <color red="0.14117647058823529" green="0.45882352941176469" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
