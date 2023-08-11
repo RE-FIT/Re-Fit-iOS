@@ -506,6 +506,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DeleteButton" destination="u5W-Y9-Kxe" id="w3K-fY-EiE"/>
+                        <outlet property="GoalButton" destination="B1x-CK-kBD" id="Dm3-L6-cnv"/>
                         <outlet property="SelectView" destination="5q8-gI-TqR" id="RYN-fI-Xbe"/>
                     </connections>
                 </viewController>

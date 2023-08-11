@@ -15,10 +15,15 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var IDTextField: UITextField!
     @IBOutlet weak var PWTextField: UITextField!
     @IBOutlet weak var EmailTextField: UITextField!
+    @IBOutlet weak var NumberTextField: UITextField!
     @IBOutlet weak var NameTextField: UITextField!
     @IBOutlet weak var BDTextField: UITextField!
     @IBOutlet weak var GenderTextField: UITextField!
     @IBOutlet weak var CheckButton: UIButton!
+    @IBOutlet weak var IdentifyButton: UIButton!
+    @IBOutlet weak var DuplicateButton: UIButton!
+    @IBOutlet weak var certification: UIButton!
+    @IBOutlet weak var NumberView: UIStackView!
     
     let dropdown = DropDown()
     
@@ -31,6 +36,8 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
 
         self.navigationController?.navigationBar.topItem?.title = ""
         self.navigationController?.navigationBar.tintColor = .black
+        
+        NumberView.isHidden = true
         
         IDTextField.layer.cornerRadius = 5
         IDTextField.layer.borderColor = UIColor.white.cgColor
@@ -66,6 +73,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         textFieldDidBeginEditing(IDTextField)
         textFieldDidBeginEditing(PWTextField)
         textFieldDidBeginEditing(EmailTextField)
+        textFieldDidBeginEditing(NumberTextField)
         textFieldDidBeginEditing(NameTextField)
         textFieldDidBeginEditing(BDTextField)
         textFieldDidBeginEditing(GenderTextField)
@@ -73,6 +81,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         textFieldDidEndEditing(IDTextField)
         textFieldDidEndEditing(PWTextField)
         textFieldDidEndEditing(EmailTextField)
+        textFieldDidEndEditing(NumberTextField)
         textFieldDidEndEditing(NameTextField)
         textFieldDidEndEditing(BDTextField)
         
@@ -80,6 +89,18 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         
         initUI()
         setDropdown()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: animated)
     }
     
     func initUI() {
@@ -128,6 +149,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         textField.layer.borderWidth = 1.0
     }
     
+    @IBAction func backButton(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
     @IBAction func SelectGender(_ sender: Any) {
         GenderTextField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor//your color
         GenderTextField.layer.cornerRadius = 5
@@ -154,6 +179,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     @IBAction func EmailPostTapped(_ sender: Any) {
         let parameterDatas = EmailModel(email: EmailTextField.text ?? "")
         APIHandlerEmailPost.instance.SendingPostEmail(parameters: parameterDatas) { result in self.EmailData = result }
+        NumberView.isHidden = false
     }
     
     @IBAction func CheckTapped(_ sender: Any) {
@@ -161,5 +187,8 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         let checkImage = CheckButton.isSelected ? "Check_Icon2" : "Check_Icon"
         CheckButton.setImage(UIImage(named: checkImage), for: .normal)
         CheckButton.tintColor = .clear
+    }
+    
+    @IBAction func Dupliacte_Tapped(_ sender: Any) {
     }
 }

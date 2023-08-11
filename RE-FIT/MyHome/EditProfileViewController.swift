@@ -26,7 +26,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
 
         ProfileView.layer.cornerRadius = self.ProfileView.frame.size.height / 2
         ProfileView.layer.masksToBounds = true
-        ProfileView.clipsToBounds = true
+        ProfileView.clipsToBounds = false
         
         IDTextField.layer.cornerRadius = 5
         IDTextField.layer.borderWidth = 1
@@ -117,5 +117,13 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         GenderTextField.layer.cornerRadius = 5
         GenderTextField.layer.borderWidth = 1.0
         dropdown.show()
+    }
+    
+    @IBAction func Camera_Tapped(_ sender: Any) {
+        guard let svc1 = self.storyboard?.instantiateViewController(identifier: "ImageEnrollAlertVC") as? ImageEnrollAlertViewController else {
+            return
+        }
+        svc1.modalPresentationStyle = .overFullScreen
+        self.present(svc1, animated: false)
     }
 }
