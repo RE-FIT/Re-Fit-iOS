@@ -29,7 +29,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     
     let Gender = [" 남자", " 여자"]
     
+    var Sexuality: Int = 0
+    
     var EmailData: EmailresultModel!
+    var JoinData: UserJoinresultModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -130,6 +133,11 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             self!.GenderTextField.layer.borderColor = UIColor.clear.cgColor
             self!.GenderTextField.layer.cornerRadius = 5
             self!.GenderTextField.layer.borderWidth = 1.0
+            if index == 0 {
+                self?.Sexuality = 0
+            } else if index == 1 {
+                self?.Sexuality = 1
+            }
         }
         
         // 취소 시 처리
@@ -190,5 +198,10 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func Dupliacte_Tapped(_ sender: Any) {
+    }
+    
+    @IBAction func JoinButton(_ sender: Any) {
+        let parameterDatas =  UserJoinModel(loginId: IDTextField.text ?? "", password: PWTextField.text ?? "", email: EmailTextField.text ?? "", name: NameTextField.text ?? "", birth: BDTextField.text ?? "", gender: Sexuality)
+        APIHandlerUserJoinPost.instance.SendingPostUserJoin(parameters: parameterDatas) { result in self.JoinData = result }
     }
 }

@@ -74,6 +74,13 @@
 		C7BB29532A680B80009F36F8 /* FeedBuyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7BB29522A680B80009F36F8 /* FeedBuyTableViewCell.swift */; };
 		C7D1A1B52A792777004D3D58 /* ClothesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */; };
 		C7D4D21D2A866409003E3401 /* ImageEnrollAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D21C2A866409003E3401 /* ImageEnrollAlertViewController.swift */; };
+		C7D4D21F2A872195003E3401 /* UserJoinPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D21E2A872195003E3401 /* UserJoinPost.swift */; };
+		C7D4D2212A872647003E3401 /* FindIDPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2202A872647003E3401 /* FindIDPost.swift */; };
+		C7D4D2232A8726C7003E3401 /* FindPWPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2222A8726C7003E3401 /* FindPWPost.swift */; };
+		C7D4D2252A87273A003E3401 /* LogoutPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2242A87273A003E3401 /* LogoutPost.swift */; };
+		C7D4D2272A872920003E3401 /* ClothEnrollPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2262A872920003E3401 /* ClothEnrollPost.swift */; };
+		C7D4D2292A872AAB003E3401 /* CommunityEnrollPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2282A872AAB003E3401 /* CommunityEnrollPost.swift */; };
+		C7D4D22B2A87A138003E3401 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D22A2A87A138003E3401 /* UserInfoModel.swift */; };
 		C7F3A51B2A7BD86800062E14 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */; };
 		C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */; };
 		C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */; };
@@ -149,6 +156,13 @@
 		C7BB29522A680B80009F36F8 /* FeedBuyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedBuyTableViewCell.swift; sourceTree = "<group>"; };
 		C7D1A1B42A792777004D3D58 /* ClothesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothesCollectionViewCell.swift; sourceTree = "<group>"; };
 		C7D4D21C2A866409003E3401 /* ImageEnrollAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageEnrollAlertViewController.swift; sourceTree = "<group>"; };
+		C7D4D21E2A872195003E3401 /* UserJoinPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserJoinPost.swift; sourceTree = "<group>"; };
+		C7D4D2202A872647003E3401 /* FindIDPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIDPost.swift; sourceTree = "<group>"; };
+		C7D4D2222A8726C7003E3401 /* FindPWPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPWPost.swift; sourceTree = "<group>"; };
+		C7D4D2242A87273A003E3401 /* LogoutPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPost.swift; sourceTree = "<group>"; };
+		C7D4D2262A872920003E3401 /* ClothEnrollPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothEnrollPost.swift; sourceTree = "<group>"; };
+		C7D4D2282A872AAB003E3401 /* CommunityEnrollPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityEnrollPost.swift; sourceTree = "<group>"; };
+		C7D4D22A2A87A138003E3401 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
 		C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSellViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedShareViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +213,8 @@
 		C78C5DE62A6A02C8000B5EEC /* MyHomeAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C7D4D2242A87273A003E3401 /* LogoutPost.swift */,
+				C7D4D22A2A87A138003E3401 /* UserInfoModel.swift */,
 			);
 			path = MyHomeAPI;
 			sourceTree = "<group>";
@@ -206,6 +222,7 @@
 		C78C5DE72A6A02D3000B5EEC /* ClothesAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C7D4D2262A872920003E3401 /* ClothEnrollPost.swift */,
 			);
 			path = ClothesAPI;
 			sourceTree = "<group>";
@@ -213,6 +230,7 @@
 		C78C5DE82A6A02DB000B5EEC /* CommunityAPI */ = {
 			isa = PBXGroup;
 			children = (
+				C7D4D2282A872AAB003E3401 /* CommunityEnrollPost.swift */,
 			);
 			path = CommunityAPI;
 			sourceTree = "<group>";
@@ -221,6 +239,9 @@
 			isa = PBXGroup;
 			children = (
 				C76870E72A6AAEA000022FC0 /* EmailPost.swift */,
+				C7D4D21E2A872195003E3401 /* UserJoinPost.swift */,
+				C7D4D2202A872647003E3401 /* FindIDPost.swift */,
+				C7D4D2222A8726C7003E3401 /* FindPWPost.swift */,
 			);
 			path = LoginAPI;
 			sourceTree = "<group>";
@@ -476,12 +497,16 @@
 			files = (
 				C73CAF632A8262AC0090E0FD /* MockUpFourViewController.swift in Sources */,
 				C768F4BF2A7625E8004BDAB7 /* WritingSingoViewController.swift in Sources */,
+				C7D4D21F2A872195003E3401 /* UserJoinPost.swift in Sources */,
 				C768F4B72A75FDA1004BDAB7 /* ShareWritingUserViewController.swift in Sources */,
+				C7D4D22B2A87A138003E3401 /* UserInfoModel.swift in Sources */,
 				C73CAF5D2A82628E0090E0FD /* MockUpOneViewController.swift in Sources */,
 				C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */,
+				C7D4D2252A87273A003E3401 /* LogoutPost.swift in Sources */,
 				C7B7B4B32A5FF9A200584E76 /* EditProfileViewController.swift in Sources */,
 				C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */,
 				C768F4C32A768AC7004BDAB7 /* WritingSingoEtcViewController.swift in Sources */,
+				C7D4D2212A872647003E3401 /* FindIDPost.swift in Sources */,
 				C73414422A57B3DE00946ECF /* LoginViewController.swift in Sources */,
 				C7D4D21D2A866409003E3401 /* ImageEnrollAlertViewController.swift in Sources */,
 				C7B7B4AD2A5FA8CA00584E76 /* MyFeedViewController.swift in Sources */,
@@ -495,6 +520,8 @@
 				C7B548312A4DDD4A001B3F62 /* MainTabViewController.swift in Sources */,
 				C73CAF5B2A82627A0090E0FD /* StartPageViewController.swift in Sources */,
 				C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */,
+				C7D4D2272A872920003E3401 /* ClothEnrollPost.swift in Sources */,
+				C7D4D2292A872AAB003E3401 /* CommunityEnrollPost.swift in Sources */,
 				C7BB294F2A67FD5D009F36F8 /* FeedShareTableViewCell.swift in Sources */,
 				C7B7B4B72A5FFA0200584E76 /* InfoTabViewController.swift in Sources */,
 				C7B3C2F02A7E7280005E2E5A /* DuplicateAlertViewController.swift in Sources */,
@@ -507,6 +534,7 @@
 				C7B3C2F22A7E754E005E2E5A /* TreeViewController.swift in Sources */,
 				C768776B2A5C411C004FA71F /* TabPWViewController.swift in Sources */,
 				C7BB29532A680B80009F36F8 /* FeedBuyTableViewCell.swift in Sources */,
+				C7D4D2232A8726C7003E3401 /* FindPWPost.swift in Sources */,
 				C7B7B4B52A5FF9AD00584E76 /* ChangePWViewController.swift in Sources */,
 				C76877692A5C4111004FA71F /* TabIDViewController.swift in Sources */,
 				C70AE4992A7281DD00D3C251 /* PriceViewController.swift in Sources */,
