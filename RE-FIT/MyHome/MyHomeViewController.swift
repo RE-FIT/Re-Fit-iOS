@@ -20,6 +20,8 @@ class MyHomeViewController: UIViewController {
     @IBOutlet weak var FeedView: UIView!
     @IBOutlet weak var LikeView: UIView!
     @IBOutlet weak var SettingView: UIView!
+    @IBOutlet weak var ProfileImage: UIImageView!
+    @IBOutlet weak var Nickname: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,6 +56,60 @@ class MyHomeViewController: UIViewController {
         SettingView.clipsToBounds = true
     }
     
+    func UserInfoResult() {
+        
+        let url = APIURL.mypageURL + "/info"
+        let encodedStr = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+        
+        guard let url = URL(string: encodedStr) else { print("err"); return }
+        
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        request.addValue(" ", forHTTPHeaderField: "X-ACCESS-TOKEN")
+        
+        URLSession.shared.dataTask(with: request) { [self] data, response, error in
+            if error != nil {
+                print("err")
+                return
+            }
+            
+            guard let response = response as? HTTPURLResponse, (200 ..< 299) ~=
+            response.statusCode else {
+                print("Error: HTTP request failed")
+                return
+            }
+            
+            if let safeData = data {
+                print(String(decoding: safeData, as: UTF8.self))
+                
+                do {
+                    let decoder = JSONDecoder()
+                    decoder.keyDecodingStrategy = .convertFromSnakeCase
+                    let decodedData = try decoder.decode(UserInfoModel.self, from: safeData)
+                    DispatchQueue.main.async {
+                        self.Nickname.text = "\(decodedData.name)"
+                        let url = URL(string: decodedData.imageUrl ?? "https://rebornbucket.s3.ap-northeast-2.amazonaws.com/6f9043df-c35f-4f57-9212-cccaa0091315.png")
+                        self.ProfileImage.load(url: url!)
+                    }
+                } catch let DecodingError.dataCorrupted(context) {
+                    print(context)
+                } catch let DecodingError.keyNotFound(key, context) {
+                    print("Key '\(key)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.valueNotFound(value, context) {
+                    print("Value '\(value)' not found:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch let DecodingError.typeMismatch(type, context)  {
+                    print("Type '\(type)' mismatch:", context.debugDescription)
+                    print("codingPath:", context.codingPath)
+                } catch {
+                    print("error: ", error)
+                }
+            }
+        }.resume()
+    }
+    
     @IBAction func InfoTapped(_ sender: Any) {
         guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "MyInfoVC") as? MyInfoViewController else {return}
         
@@ -76,5 +132,19 @@ class MyHomeViewController: UIViewController {
         guard let rvc = self.storyboard?.instantiateViewController(withIdentifier: "SettingsVC") as? SettingsViewController else {return}
         
         self.navigationController?.pushViewController(rvc, animated: true)
+    }
+}
+
+extension UIImageView {
+    func load(url: URL) {
+        DispatchQueue.global().async { [weak self] in
+            if let data = try? Data(contentsOf: url) {
+                if let image = UIImage(data: data) {
+                    DispatchQueue.main.async {
+                        self?.image = image
+                    }
+                }
+            }
+        }
     }
 }

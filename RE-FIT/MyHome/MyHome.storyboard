@@ -326,6 +326,8 @@
                         <outlet property="FeedView" destination="m2H-OL-zBr" id="u2R-2B-O7R"/>
                         <outlet property="InfoView" destination="RTI-jI-28w" id="QP8-pK-SaD"/>
                         <outlet property="LikeView" destination="DZT-yX-93C" id="59m-fz-b4O"/>
+                        <outlet property="Nickname" destination="EvI-jP-W7e" id="i7K-jp-h5T"/>
+                        <outlet property="ProfileImage" destination="4I0-Wp-Sgf" id="T5I-yL-p2f"/>
                         <outlet property="ProfileView" destination="3tI-eO-pet" id="akV-Ut-2B0"/>
                         <outlet property="SettingView" destination="KYt-N2-WIU" id="7V3-ni-8nc"/>
                         <outlet property="TopView" destination="Iwn-vu-mxg" id="K9b-4L-BwF"/>

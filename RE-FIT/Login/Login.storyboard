@@ -1048,6 +1048,9 @@
                                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
                                                     <color key="baseBackgroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765184400000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="JoinButton:" destination="g7T-SQ-BWX" eventType="touchUpInside" id="3R4-Wr-KFQ"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성별" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x2w-Xt-ic2">
                                                 <rect key="frame" x="42" y="601.33333333333337" width="21" height="14.666666666666629"/>
