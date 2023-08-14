@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,17 +16,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launch_Image" translatesAutoresizingMaskIntoConstraints="NO" id="kvN-Cg-fkp">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Refit_logo" translatesAutoresizingMaskIntoConstraints="NO" id="0Sq-cM-q7V">
+                                <rect key="frame" x="136.66666666666666" y="366" width="119.99999999999997" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="379-Py-RaD"/>
+                                    <constraint firstAttribute="width" constant="120" id="d9c-eb-9SZ"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.94065803290000005" green="0.94892281290000002" blue="0.96147733930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="MainColor"/>
                         <constraints>
-                            <constraint firstItem="kvN-Cg-fkp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LWv-Z1-fV9"/>
-                            <constraint firstItem="kvN-Cg-fkp" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Pl4-ey-XF5"/>
-                            <constraint firstAttribute="bottom" secondItem="kvN-Cg-fkp" secondAttribute="bottom" id="b4D-Er-fqa"/>
-                            <constraint firstItem="kvN-Cg-fkp" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="eym-aE-5cc"/>
+                            <constraint firstItem="0Sq-cM-q7V" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="BwO-Wz-Vn1"/>
+                            <constraint firstItem="0Sq-cM-q7V" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Thg-r4-wwP"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -35,6 +38,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Launch_Image" width="360" height="800"/>
+        <image name="Refit_logo" width="132" height="110"/>
+        <namedColor name="MainColor">
+            <color red="0.14117647058823529" green="0.45882352941176469" blue="0.20784313725490197" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

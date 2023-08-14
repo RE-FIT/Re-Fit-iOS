@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3533DA8163629186B18E6969 /* Pods_RE_FIT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D84A43E7FECEAC244D1BCF50 /* Pods_RE_FIT.framework */; };
+		C70853512A88809F00EC1BDC /* CommunityGetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70853502A88809F00EC1BDC /* CommunityGetModel.swift */; };
 		C70AE4992A7281DD00D3C251 /* PriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70AE4982A7281DD00D3C251 /* PriceViewController.swift */; };
 		C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C726406D2A713E6600CEBFFA /* WritingViewController.swift */; };
 		C732F6DB2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732F6DA2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift */; };
@@ -80,7 +81,7 @@
 		C7D4D2252A87273A003E3401 /* LogoutPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2242A87273A003E3401 /* LogoutPost.swift */; };
 		C7D4D2272A872920003E3401 /* ClothEnrollPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2262A872920003E3401 /* ClothEnrollPost.swift */; };
 		C7D4D2292A872AAB003E3401 /* CommunityEnrollPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D2282A872AAB003E3401 /* CommunityEnrollPost.swift */; };
-		C7D4D22B2A87A138003E3401 /* UserInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D22A2A87A138003E3401 /* UserInfoModel.swift */; };
+		C7D4D22B2A87A138003E3401 /* MyPageGetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D4D22A2A87A138003E3401 /* MyPageGetModel.swift */; };
 		C7F3A51B2A7BD86800062E14 /* CancelAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */; };
 		C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */; };
 		C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */; };
@@ -88,6 +89,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C70853502A88809F00EC1BDC /* CommunityGetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityGetModel.swift; sourceTree = "<group>"; };
 		C70AE4982A7281DD00D3C251 /* PriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceViewController.swift; sourceTree = "<group>"; };
 		C726406D2A713E6600CEBFFA /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C732F6DA2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -162,7 +164,7 @@
 		C7D4D2242A87273A003E3401 /* LogoutPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutPost.swift; sourceTree = "<group>"; };
 		C7D4D2262A872920003E3401 /* ClothEnrollPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothEnrollPost.swift; sourceTree = "<group>"; };
 		C7D4D2282A872AAB003E3401 /* CommunityEnrollPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityEnrollPost.swift; sourceTree = "<group>"; };
-		C7D4D22A2A87A138003E3401 /* UserInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoModel.swift; sourceTree = "<group>"; };
+		C7D4D22A2A87A138003E3401 /* MyPageGetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageGetModel.swift; sourceTree = "<group>"; };
 		C7F3A51A2A7BD86800062E14 /* CancelAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancelAlertViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C12A66C9C5000B7D87 /* FeedSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedSellViewController.swift; sourceTree = "<group>"; };
 		C7FFB8C32A66C9D2000B7D87 /* FeedShareViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedShareViewController.swift; sourceTree = "<group>"; };
@@ -214,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D4D2242A87273A003E3401 /* LogoutPost.swift */,
-				C7D4D22A2A87A138003E3401 /* UserInfoModel.swift */,
+				C7D4D22A2A87A138003E3401 /* MyPageGetModel.swift */,
 			);
 			path = MyHomeAPI;
 			sourceTree = "<group>";
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				C7D4D2282A872AAB003E3401 /* CommunityEnrollPost.swift */,
+				C70853502A88809F00EC1BDC /* CommunityGetModel.swift */,
 			);
 			path = CommunityAPI;
 			sourceTree = "<group>";
@@ -499,7 +502,7 @@
 				C768F4BF2A7625E8004BDAB7 /* WritingSingoViewController.swift in Sources */,
 				C7D4D21F2A872195003E3401 /* UserJoinPost.swift in Sources */,
 				C768F4B72A75FDA1004BDAB7 /* ShareWritingUserViewController.swift in Sources */,
-				C7D4D22B2A87A138003E3401 /* UserInfoModel.swift in Sources */,
+				C7D4D22B2A87A138003E3401 /* MyPageGetModel.swift in Sources */,
 				C73CAF5D2A82628E0090E0FD /* MockUpOneViewController.swift in Sources */,
 				C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */,
 				C7D4D2252A87273A003E3401 /* LogoutPost.swift in Sources */,
@@ -549,6 +552,7 @@
 				C7FFB8C42A66C9D2000B7D87 /* FeedShareViewController.swift in Sources */,
 				C79B5AA42A4D605A00A8B485 /* SceneDelegate.swift in Sources */,
 				C73CAF652A8262C60090E0FD /* MockUpFiveViewController.swift in Sources */,
+				C70853512A88809F00EC1BDC /* CommunityGetModel.swift in Sources */,
 				C7B548352A4DDE75001B3F62 /* ClothesViewController.swift in Sources */,
 				C7B3C2EA2A7E7239005E2E5A /* SelectClothesViewController.swift in Sources */,
 				C73414442A5825AE00946ECF /* JoinViewController.swift in Sources */,
