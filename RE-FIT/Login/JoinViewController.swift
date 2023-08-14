@@ -24,6 +24,12 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var DuplicateButton: UIButton!
     @IBOutlet weak var certification: UIButton!
     @IBOutlet weak var NumberView: UIStackView!
+    @IBOutlet weak var idTestLabel: UILabel!
+    @IBOutlet weak var pwTestLabel: UILabel!
+    @IBOutlet weak var emailTestLabel: UILabel!
+    @IBOutlet weak var numberTestLabel: UILabel!
+    @IBOutlet weak var nameTestLabel: UILabel!
+    @IBOutlet weak var bdTestLabel: UILabel!
     
     let dropdown = DropDown()
     
@@ -67,6 +73,16 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         GenderTextField.layer.borderWidth = 1.0
         GenderTextField.layer.masksToBounds = true
         
+        certification.layer.cornerRadius = 5
+        certification.layer.masksToBounds = true
+        certification.isEnabled = false
+        IdentifyButton.layer.cornerRadius = 5
+        IdentifyButton.layer.masksToBounds = true
+        IdentifyButton.isEnabled = false
+        DuplicateButton.layer.cornerRadius = 5
+        DuplicateButton.layer.masksToBounds = true
+        DuplicateButton.isEnabled = false
+        
         IDTextField.delegate = self
         PWTextField.delegate = self
         EmailTextField.delegate = self
@@ -87,6 +103,13 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         textFieldDidEndEditing(NumberTextField)
         textFieldDidEndEditing(NameTextField)
         textFieldDidEndEditing(BDTextField)
+        
+        IDTextField.addTarget(self, action: #selector(IDRegex(_:)), for: .editingChanged)
+        PWTextField.addTarget(self, action: #selector(PWRegex(_:)), for: .editingChanged)
+        EmailTextField.addTarget(self, action: #selector(EmailRegex(_:)), for: .editingChanged)
+        BDTextField.addTarget(self, action: #selector(BirthRegex(_:)), for: .editingChanged)
+        NumberTextField.addTarget(self, action: #selector(NumberRegex(_:)), for: .editingChanged)
+        NameTextField.addTarget(self, action: #selector(NameRegex(_:)), for: .editingChanged)
         
         GenderTextField.isEnabled = false
         
@@ -145,6 +168,141 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @objc func IDRegex(_ textField: UITextField) {
+        if isValidID(testStr: textField.text) {
+            idTestLabel.text = ""
+            idTestLabel.textColor = UIColor(named: "MainColor")
+        }
+        else {
+            idTestLabel.text = "* 8-16자의 영문, 숫자를 포함해야 합니다."
+            idTestLabel.textColor = UIColor(named: "RedColor")
+        }
+        
+        UIView.animate(withDuration: 0.1) { // 효과 주기
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func PWRegex(_ textField: UITextField) {
+        
+        if isValidPW(testStr: textField.text) {
+            pwTestLabel.text = "* 사용 가능 (안전도 등급 높음)"
+            pwTestLabel.textColor = UIColor(named: "MainColor")
+        }
+        else {
+            pwTestLabel.text = "* 8-16자의 영문 대소문자, 숫자, 특수문자 ((!), (_) , (-))를 포함해야 합니다."
+            pwTestLabel.textColor = UIColor(named: "RedColor")
+        }
+        
+        UIView.animate(withDuration: 0.1) { // 효과 주기
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func EmailRegex(_ textField: UITextField) {
+        
+        if isValidEmail(testStr: textField.text) {
+            emailTestLabel.text = "* 사용가능한 이메일 입니다."
+            emailTestLabel.textColor = UIColor(named: "MainColor")
+            certification.isEnabled = true
+            certification.backgroundColor = UIColor(named: "MainColor")
+            certification.setTitleColor(UIColor.white, for: .normal)
+        }
+        else {
+            emailTestLabel.text = "* 이메일 형식이 올바르지 않습니다."
+            emailTestLabel.textColor = UIColor(named: "RedColor")
+            certification.isEnabled = false
+            certification.backgroundColor = UIColor(named: "GrayColor")
+            certification.setTitleColor(UIColor.black, for: .normal)
+        }
+        
+        UIView.animate(withDuration: 0.1) { // 효과 주기
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func BirthRegex(_ textField: UITextField) {
+        
+        if isValidBirth(testStr: textField.text) {
+            bdTestLabel.text = ""
+            bdTestLabel.textColor = UIColor(named: "MainColor")
+        }
+        else {
+            bdTestLabel.text = "* YYYY/MM/DD 형식으로 작성해야 합니다."
+            bdTestLabel.textColor = UIColor(named: "RedColor")
+        }
+        
+        UIView.animate(withDuration: 0.1) { // 효과 주기
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func NumberRegex(_ textField: UITextField) {
+        
+        if (textField.text?.count ?? 0 >= 8) {
+            IdentifyButton.isEnabled = true
+            IdentifyButton.backgroundColor = UIColor(named: "MainColor")
+            IdentifyButton.setTitleColor(UIColor.white, for: .normal)
+        } else {
+            IdentifyButton.isEnabled = false
+            IdentifyButton.backgroundColor = UIColor(named: "GrayColor")
+            IdentifyButton.setTitleColor(UIColor.black, for: .normal)
+        }
+        
+        UIView.animate(withDuration: 0.1) { // 효과 주기
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func NameRegex(_ textField: UITextField) {
+        
+        if (textField.text?.count ?? 0 >= 1 && textField.text?.count ?? 0 <= 8) {
+            DuplicateButton.isEnabled = true
+            DuplicateButton.backgroundColor = UIColor(named: "MainColor")
+            DuplicateButton.setTitleColor(UIColor.white, for: .normal)
+        } else {
+            DuplicateButton.isEnabled = false
+            DuplicateButton.backgroundColor = UIColor(named: "GrayColor")
+            DuplicateButton.setTitleColor(UIColor.black, for: .normal)
+        }
+        
+        UIView.animate(withDuration: 0.1) { // 효과 주기
+                self.view.layoutIfNeeded()
+        }
+    }
+    
+    // 아이디 정규표현식
+    func isValidID(testStr: String?) -> Bool{
+        let regex = "[A-Za-z0-9]{8,16}"
+        
+        let idTest = NSPredicate(format:"SELF MATCHES %@", regex)
+        return idTest.evaluate(with: testStr)
+    }
+    
+    // 비밀번호 정규표현식
+    func isValidPW(testStr: String?) -> Bool{
+        let regex = "^(?=.*[A-Z])(?=.*[a-z])(?=.*[\\d])(?=.*[~!@#\\$%\\^&\\*])[\\w~!@#\\$%\\^&\\*]{8,16}$"
+        
+        let pwTest = NSPredicate(format:"SELF MATCHES %@", regex)
+        return pwTest.evaluate(with: testStr)
+    }
+    
+    // 이메일 정규표현식
+    func isValidEmail(testStr: String?) -> Bool{
+        let regex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}"
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
+        return emailTest.evaluate(with: testStr)
+    }
+    
+    // 생년월일 정규표현식
+    func isValidBirth(testStr: String?) -> Bool{
+        let regex = "([0-9]{4})+/([0-9]{2})+/([0-9]{2})"
+        
+        let birthTest = NSPredicate(format:"SELF MATCHES %@", regex)
+        return birthTest.evaluate(with: testStr)
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor//your color
         textField.layer.cornerRadius = 5
@@ -188,6 +346,18 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         let parameterDatas = EmailModel(email: EmailTextField.text ?? "")
         APIHandlerEmailPost.instance.SendingPostEmail(parameters: parameterDatas) { result in self.EmailData = result }
         NumberView.isHidden = false
+    }
+    
+    @IBAction func Number_Checked(_ sender: Any) {
+        if (NumberTextField.text == EmailData.code) {
+            NumberTextField.isEnabled = false
+            IdentifyButton.isEnabled = false
+            IdentifyButton.backgroundColor = UIColor(named: "GrayColor")
+            IdentifyButton.setTitleColor(UIColor.black, for: .normal)
+        } else {
+            numberTestLabel.text = "* 인증번호를 다시 한번 확인해주세요."
+            numberTestLabel.textColor = UIColor(named: "RedColor")
+        }
     }
     
     @IBAction func CheckTapped(_ sender: Any) {

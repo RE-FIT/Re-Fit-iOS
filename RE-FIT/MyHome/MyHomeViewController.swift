@@ -9,8 +9,6 @@ import UIKit
 
 class MyHomeViewController: UIViewController {
     
-    @IBOutlet weak var TopView: UIView!
-    @IBOutlet weak var ProfileView: UIView!
     @IBOutlet weak var DayView: UIView!
     @IBOutlet weak var Day1: UIView!
     @IBOutlet weak var Day2: UIView!
@@ -26,13 +24,9 @@ class MyHomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        TopView.layer.cornerRadius = 30
-        TopView.layer.masksToBounds = false
-        TopView.layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
-        
-        ProfileView.layer.cornerRadius = self.ProfileView.frame.size.height / 2
-        ProfileView.layer.masksToBounds = true
-        ProfileView.clipsToBounds = true
+        ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.height / 2
+        ProfileImage.layer.masksToBounds = true
+        ProfileImage.clipsToBounds = true
         
         DayView.layer.cornerRadius = 10
         DayView.clipsToBounds = true
@@ -63,9 +57,11 @@ class MyHomeViewController: UIViewController {
         
         guard let url = URL(string: encodedStr) else { print("err"); return }
         
+//        let postString = "keyword=정렬"
+        
         var request = URLRequest(url: url)
         request.httpMethod = "GET"
-        
+//        request.httpBody = postString.data(using: String.Encoding.utf8)
         request.addValue(" ", forHTTPHeaderField: "X-ACCESS-TOKEN")
         
         URLSession.shared.dataTask(with: request) { [self] data, response, error in
@@ -88,7 +84,7 @@ class MyHomeViewController: UIViewController {
                     decoder.keyDecodingStrategy = .convertFromSnakeCase
                     let decodedData = try decoder.decode(UserInfoModel.self, from: safeData)
                     DispatchQueue.main.async {
-                        self.Nickname.text = "\(decodedData.name)"
+                        self.Nickname.text = "\(decodedData.name) 님의 환경지키기"
                         let url = URL(string: decodedData.imageUrl ?? "https://rebornbucket.s3.ap-northeast-2.amazonaws.com/6f9043df-c35f-4f57-9212-cccaa0091315.png")
                         self.ProfileImage.load(url: url!)
                     }
