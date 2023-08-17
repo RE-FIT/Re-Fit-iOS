@@ -38,6 +38,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     var Sexuality: Int = 0
     
     var EmailData: EmailresultModel!
+    var CheckNameData: CheckNameresultModel!
     var JoinData: UserJoinresultModel!
     
     override func viewDidLoad() {
@@ -368,6 +369,11 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func Dupliacte_Tapped(_ sender: Any) {
+        let parameterDatas = CheckNameModel(name: NameTextField.text ?? "")
+        APIHandlerCheckNamePost.instance.SendingPostCheckName(parameters: parameterDatas) { result in self.CheckNameData = result }
+        if (CheckNameData.code == "10020") {
+            
+        }
     }
     
     @IBAction func JoinButton(_ sender: Any) {

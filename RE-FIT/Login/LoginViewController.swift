@@ -34,6 +34,18 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         textFieldDidEndEditing(PWTextField)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor//your color
         textField.layer.cornerRadius = 5
