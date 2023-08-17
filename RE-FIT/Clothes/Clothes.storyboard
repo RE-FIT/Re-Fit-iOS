@@ -465,7 +465,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="옷 삭제">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSS-Gv-MDE">
@@ -556,7 +556,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="정보 수정">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ww7-fd-8bx">
@@ -580,7 +580,7 @@
                                         <buttonConfiguration key="configuration" style="filled" title="옷 삭제">
                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </buttonConfiguration>
                                     </button>
                                 </subviews>
@@ -612,6 +612,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="DeleteButton" destination="96n-dk-cci" id="s6r-vo-LIA"/>
+                        <outlet property="EditButton" destination="Wbg-Q6-ZIc" id="hoj-Th-EQq"/>
                         <outlet property="SelectView" destination="Kxl-2x-NOt" id="axZ-AI-jYw"/>
                     </connections>
                 </viewController>
@@ -1570,7 +1572,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="100"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Tree1" translatesAutoresizingMaskIntoConstraints="NO" id="ABs-FR-Diu">
-                                                            <rect key="frame" x="10" y="10" width="70" height="90"/>
+                                                            <rect key="frame" x="17.000000000000004" y="5" width="56.333333333333343" height="90"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="90" id="zY4-98-0m6"/>
                                                             </constraints>
@@ -1578,9 +1580,8 @@
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     <constraints>
-                                                        <constraint firstItem="ABs-FR-Diu" firstAttribute="top" secondItem="PmY-tz-TiB" secondAttribute="top" constant="10" id="3iO-GZ-jSe"/>
-                                                        <constraint firstAttribute="trailing" secondItem="ABs-FR-Diu" secondAttribute="trailing" constant="10" id="BcU-jD-PzC"/>
-                                                        <constraint firstItem="ABs-FR-Diu" firstAttribute="leading" secondItem="PmY-tz-TiB" secondAttribute="leading" constant="10" id="fAL-nJ-Bk7"/>
+                                                        <constraint firstItem="ABs-FR-Diu" firstAttribute="centerX" secondItem="PmY-tz-TiB" secondAttribute="centerX" id="52M-CF-DGw"/>
+                                                        <constraint firstItem="ABs-FR-Diu" firstAttribute="centerY" secondItem="PmY-tz-TiB" secondAttribute="centerY" id="iIl-pg-gxb"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1667,7 +1668,7 @@
         <image name="Tap_Green" width="12" height="7"/>
         <image name="Top_Green" width="22" height="18"/>
         <image name="Top_Image" width="67" height="76"/>
-        <image name="Tree1" width="64.5" height="73"/>
+        <image name="Tree1" width="56.5" height="65"/>
         <image name="Undo_Big" width="15" height="15"/>
         <image name="Warning_Icon" width="18" height="18"/>
         <namedColor name="MainColor">
