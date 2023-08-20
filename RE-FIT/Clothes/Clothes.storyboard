@@ -803,7 +803,7 @@
                                                 <color key="textColor" red="0.14088749889999999" green="0.45650213960000002" blue="0.2065755427" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clothes_BigBig" translatesAutoresizingMaskIntoConstraints="NO" id="2x5-en-GAb">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Default_Cloth" translatesAutoresizingMaskIntoConstraints="NO" id="2x5-en-GAb">
                                                 <rect key="frame" x="71.666666666666686" y="55" width="250" height="250"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="250" id="oLi-8D-s9a"/>
@@ -1258,11 +1258,34 @@
                                                     <action selector="backButton:" destination="IsX-3O-L2y" eventType="touchUpInside" id="HY8-00-vcC"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옷 사진을 등록해주세요 :)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oG8-5v-0Ee">
+                                                <rect key="frame" x="141.66666666666666" y="194" width="110" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="1wH-QS-5j8"/>
+                                                    <constraint firstAttribute="width" constant="110" id="TuI-FI-mff"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                                <color key="textColor" red="0.37694424389999998" green="0.39928340909999999" blue="0.43137720229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fg-QQ-jjc">
+                                                <rect key="frame" x="176.66666666666666" y="144" width="40" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="8CB-uB-aFL"/>
+                                                    <constraint firstAttribute="height" constant="40" id="Hu8-NI-9BW"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="Camera"/>
+                                                <connections>
+                                                    <action selector="Enroll_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="arX-dk-R1D"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.94133389000000001" green="0.9487617612" blue="0.96078616380000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstItem="2x5-en-GAb" firstAttribute="centerX" secondItem="8oY-RH-ks0" secondAttribute="centerX" id="0gd-VF-QIf"/>
                                             <constraint firstAttribute="trailing" secondItem="9Fb-dP-Qa8" secondAttribute="trailing" constant="40" id="2bq-3Z-fPU"/>
+                                            <constraint firstItem="8fg-QQ-jjc" firstAttribute="top" secondItem="zyq-Kx-XyM" secondAttribute="bottom" constant="115" id="7XE-qp-BQ7"/>
                                             <constraint firstItem="gBO-q0-DJS" firstAttribute="top" secondItem="8oY-RH-ks0" secondAttribute="top" id="7Xv-fY-M0l"/>
                                             <constraint firstItem="Aed-vC-l3M" firstAttribute="leading" secondItem="8oY-RH-ks0" secondAttribute="leading" constant="40" id="8RM-cP-xMx"/>
                                             <constraint firstItem="zyq-Kx-XyM" firstAttribute="centerX" secondItem="8oY-RH-ks0" secondAttribute="centerX" id="8vT-YE-Kas"/>
@@ -1273,11 +1296,14 @@
                                             <constraint firstAttribute="bottom" secondItem="CH7-nN-V3x" secondAttribute="bottom" constant="40" id="Vhg-21-BEY"/>
                                             <constraint firstItem="5Jm-J0-GkT" firstAttribute="top" secondItem="2x5-en-GAb" secondAttribute="bottom" constant="50" id="WOv-Ia-Foh"/>
                                             <constraint firstItem="9hG-0W-rQF" firstAttribute="top" secondItem="dwZ-PW-EwR" secondAttribute="bottom" constant="16" id="WmV-85-E67"/>
+                                            <constraint firstItem="8fg-QQ-jjc" firstAttribute="centerX" secondItem="8oY-RH-ks0" secondAttribute="centerX" id="X03-0a-rCs"/>
                                             <constraint firstItem="2x5-en-GAb" firstAttribute="top" secondItem="zyq-Kx-XyM" secondAttribute="bottom" constant="26" id="ZDu-Uy-WLY"/>
                                             <constraint firstAttribute="trailing" secondItem="CH7-nN-V3x" secondAttribute="trailing" constant="60" id="ZIl-dS-a1i"/>
                                             <constraint firstItem="5Jm-J0-GkT" firstAttribute="leading" secondItem="8oY-RH-ks0" secondAttribute="leading" constant="40" id="a0G-un-gMa"/>
                                             <constraint firstAttribute="trailing" secondItem="Aed-vC-l3M" secondAttribute="trailing" constant="40" id="b6Q-sy-Qzh"/>
+                                            <constraint firstItem="oG8-5v-0Ee" firstAttribute="top" secondItem="8fg-QQ-jjc" secondAttribute="bottom" constant="10" id="eIX-zo-NU1"/>
                                             <constraint firstItem="gBO-q0-DJS" firstAttribute="leading" secondItem="8oY-RH-ks0" secondAttribute="leading" constant="16" id="f3h-ND-Shw"/>
+                                            <constraint firstItem="oG8-5v-0Ee" firstAttribute="centerX" secondItem="8oY-RH-ks0" secondAttribute="centerX" id="fOb-dv-BsE"/>
                                             <constraint firstItem="dwZ-PW-EwR" firstAttribute="leading" secondItem="8oY-RH-ks0" secondAttribute="leading" constant="40" id="gol-ge-t56"/>
                                             <constraint firstItem="SLz-hx-mgm" firstAttribute="leading" secondItem="8oY-RH-ks0" secondAttribute="leading" constant="40" id="gpH-u7-UUg"/>
                                             <constraint firstAttribute="trailing" secondItem="9hG-0W-rQF" secondAttribute="trailing" constant="40" id="hCU-ho-dDw"/>
@@ -1319,6 +1345,8 @@
                         <outlet property="AlarmView" destination="9hG-0W-rQF" id="p0a-5u-a69"/>
                         <outlet property="CategoryView" destination="5Jm-J0-GkT" id="392-Rn-1Pn"/>
                         <outlet property="ClothesImage" destination="2x5-en-GAb" id="fuc-K6-H2W"/>
+                        <outlet property="EnrollButton" destination="8fg-QQ-jjc" id="81G-Zu-k5J"/>
+                        <outlet property="EnrollLabel" destination="oG8-5v-0Ee" id="XTr-su-Moz"/>
                         <outlet property="GoalView" destination="9Fb-dP-Qa8" id="aR5-IM-AwX"/>
                         <outlet property="MonthTextField" destination="hjy-bP-czo" id="gOi-6S-0jV"/>
                         <outlet property="NumbersTextField" destination="BMp-LY-sjE" id="eSJ-TV-XSv"/>
@@ -1330,6 +1358,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbz-4H-j2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1045" y="888"/>
+        </scene>
+        <!--Cloth Image Enroll View Controller-->
+        <scene sceneID="iUe-hZ-XLf">
+            <objects>
+                <viewController storyboardIdentifier="ClothImageEnrollVC" id="mtp-SR-LRD" customClass="ClothImageEnrollViewController" customModule="RE_FIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="44e-Vm-6NK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGh-rQ-fWG">
+                                <rect key="frame" x="40" y="160" width="313" height="210"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="옷 등록" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7t-XS-cOD">
+                                        <rect key="frame" x="127.99999999999999" y="34" width="57.333333333333329" height="24"/>
+                                        <fontDescription key="fontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9m-la-Czq">
+                                        <rect key="frame" x="30" y="88" width="253" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="zig-em-sEO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="카메라로 찍기">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="Camera_Tapped:" destination="mtp-SR-LRD" eventType="touchUpInside" id="gGY-he-vzt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdS-OA-fnv">
+                                        <rect key="frame" x="30" y="146" width="253" height="42"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="42" id="1N2-w0-ai8"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="앨범에서 가져오기">
+                                            <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Bold" family="Apple SD Gothic Neo" pointSize="16"/>
+                                            <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="Album_Tapped:" destination="mtp-SR-LRD" eventType="touchUpInside" id="R5t-Z9-aKH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ZD-QC-YYV">
+                                        <rect key="frame" x="270" y="6" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="mhz-4N-0hq"/>
+                                            <constraint firstAttribute="height" constant="35" id="rQ1-pu-g4K"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Undo_Big"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="EON-dD-qVA" eventType="touchUpInside" id="1Vz-j3-4ft"/>
+                                            <action selector="backButton:" destination="mtp-SR-LRD" eventType="touchUpInside" id="eP4-DR-4oC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="wdS-OA-fnv" secondAttribute="trailing" constant="30" id="0Ub-0I-7KJ"/>
+                                    <constraint firstAttribute="height" constant="210" id="9CH-Ih-VHc"/>
+                                    <constraint firstAttribute="trailing" secondItem="1ZD-QC-YYV" secondAttribute="trailing" constant="8" id="DRM-Qc-Jfj"/>
+                                    <constraint firstItem="a7t-XS-cOD" firstAttribute="centerX" secondItem="BGh-rQ-fWG" secondAttribute="centerX" id="QMI-YY-m0b"/>
+                                    <constraint firstItem="wdS-OA-fnv" firstAttribute="leading" secondItem="BGh-rQ-fWG" secondAttribute="leading" constant="30" id="RYh-xi-fL3"/>
+                                    <constraint firstAttribute="trailing" secondItem="J9m-la-Czq" secondAttribute="trailing" constant="30" id="Vnp-qL-awS"/>
+                                    <constraint firstItem="J9m-la-Czq" firstAttribute="leading" secondItem="BGh-rQ-fWG" secondAttribute="leading" constant="30" id="aUn-Yc-dcB"/>
+                                    <constraint firstItem="1ZD-QC-YYV" firstAttribute="top" secondItem="BGh-rQ-fWG" secondAttribute="top" constant="6" id="anr-Qs-lf8"/>
+                                    <constraint firstItem="J9m-la-Czq" firstAttribute="top" secondItem="a7t-XS-cOD" secondAttribute="bottom" constant="30" id="evA-zN-a4d"/>
+                                    <constraint firstItem="wdS-OA-fnv" firstAttribute="top" secondItem="J9m-la-Czq" secondAttribute="bottom" constant="16" id="nZM-xi-kuS"/>
+                                    <constraint firstItem="a7t-XS-cOD" firstAttribute="top" secondItem="BGh-rQ-fWG" secondAttribute="top" constant="34" id="xgC-O2-y5f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="p1U-2M-pst"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.19677411009933773" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="p1U-2M-pst" firstAttribute="trailing" secondItem="BGh-rQ-fWG" secondAttribute="trailing" constant="40" id="1yF-l2-o0I"/>
+                            <constraint firstItem="BGh-rQ-fWG" firstAttribute="top" secondItem="44e-Vm-6NK" secondAttribute="top" constant="160" id="AVl-DY-3np"/>
+                            <constraint firstItem="BGh-rQ-fWG" firstAttribute="leading" secondItem="p1U-2M-pst" secondAttribute="leading" constant="40" id="M1y-7d-Shf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="AlbumButton" destination="wdS-OA-fnv" id="iTt-44-Qsl"/>
+                        <outlet property="CameraButton" destination="J9m-la-Czq" id="7m2-G9-Ccx"/>
+                        <outlet property="EnrollView" destination="BGh-rQ-fWG" id="AV5-NA-nS4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSH-t3-fAc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815" y="699"/>
         </scene>
         <!--Cancel Alert View Controller-->
         <scene sceneID="ozI-be-0dK">
@@ -1421,7 +1544,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5P-jk-1hO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1815" y="699"/>
+            <point key="canvasLocation" x="1815" y="1368"/>
         </scene>
         <!--Tree View Controller-->
         <scene sceneID="4PO-3K-kih">
@@ -1659,7 +1782,8 @@
     <resources>
         <image name="Back_Icon" width="10" height="18"/>
         <image name="Bottom_Green" width="12" height="18"/>
-        <image name="Clothes_BigBig" width="250" height="250"/>
+        <image name="Camera" width="24" height="24"/>
+        <image name="Default_Cloth" width="258" height="258"/>
         <image name="Onepiece_Green" width="18" height="18"/>
         <image name="Outer_Green" width="19" height="18"/>
         <image name="Select_Season_Grey" width="10" height="10"/>
