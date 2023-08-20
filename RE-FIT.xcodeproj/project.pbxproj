@@ -26,6 +26,7 @@
 		C73F31A82A56B49800D515A8 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C73F31A72A56B49800D515A8 /* Login.storyboard */; };
 		C7426AC62A6FEF850017371B /* DeleteAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */; };
 		C751C4722A7A840300616256 /* EnrollClothesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C751C4712A7A840300616256 /* EnrollClothesViewController.swift */; };
+		C7653FBB2A8F8518001A3D92 /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7653FBA2A8F8518001A3D92 /* NetworkResult.swift */; };
 		C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76870E72A6AAEA000022FC0 /* EmailPost.swift */; };
 		C76877652A5C3F26004FA71F /* FindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877642A5C3F26004FA71F /* FindViewController.swift */; };
 		C76877672A5C3FA9004FA71F /* FindTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C76877662A5C3FA9004FA71F /* FindTabViewController.swift */; };
@@ -45,6 +46,7 @@
 		C77166862A4D654100E7F8C8 /* Community.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166852A4D654100E7F8C8 /* Community.storyboard */; };
 		C77166882A4D655E00E7F8C8 /* Clothes.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166872A4D655E00E7F8C8 /* Clothes.storyboard */; };
 		C771668A2A4D656800E7F8C8 /* MyHome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C77166892A4D656800E7F8C8 /* MyHome.storyboard */; };
+		C777368E2A91C7540074466B /* ClothImageEnrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C777368D2A91C7540074466B /* ClothImageEnrollViewController.swift */; };
 		C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79909932A5E522100296DEC /* FindIDViewController.swift */; };
 		C79909962A5E522C00296DEC /* FindPWViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79909952A5E522C00296DEC /* FindPWViewController.swift */; };
 		C79B5AA22A4D605A00A8B485 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79B5AA12A4D605A00A8B485 /* AppDelegate.swift */; };
@@ -111,6 +113,7 @@
 		C73F31A72A56B49800D515A8 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		C7426AC52A6FEF850017371B /* DeleteAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAlertViewController.swift; sourceTree = "<group>"; };
 		C751C4712A7A840300616256 /* EnrollClothesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollClothesViewController.swift; sourceTree = "<group>"; };
+		C7653FBA2A8F8518001A3D92 /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		C76870E72A6AAEA000022FC0 /* EmailPost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailPost.swift; sourceTree = "<group>"; };
 		C76877642A5C3F26004FA71F /* FindViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindViewController.swift; sourceTree = "<group>"; };
 		C76877662A5C3FA9004FA71F /* FindTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindTabViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +133,7 @@
 		C77166852A4D654100E7F8C8 /* Community.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Community.storyboard; sourceTree = "<group>"; };
 		C77166872A4D655E00E7F8C8 /* Clothes.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Clothes.storyboard; sourceTree = "<group>"; };
 		C77166892A4D656800E7F8C8 /* MyHome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MyHome.storyboard; sourceTree = "<group>"; };
+		C777368D2A91C7540074466B /* ClothImageEnrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClothImageEnrollViewController.swift; sourceTree = "<group>"; };
 		C79909932A5E522100296DEC /* FindIDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindIDViewController.swift; sourceTree = "<group>"; };
 		C79909952A5E522C00296DEC /* FindPWViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindPWViewController.swift; sourceTree = "<group>"; };
 		C79B5A9E2A4D605A00A8B485 /* RE-FIT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RE-FIT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -338,6 +342,7 @@
 				C7B3C2EF2A7E7280005E2E5A /* DuplicateAlertViewController.swift */,
 				C7B3C2F12A7E754E005E2E5A /* TreeViewController.swift */,
 				C732F6DA2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift */,
+				C777368D2A91C7540074466B /* ClothImageEnrollViewController.swift */,
 			);
 			path = Clothes;
 			sourceTree = "<group>";
@@ -370,6 +375,7 @@
 			isa = PBXGroup;
 			children = (
 				C7B778C22A4E83FC00494CEC /* APIURL.swift */,
+				C7653FBA2A8F8518001A3D92 /* NetworkResult.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -516,6 +522,7 @@
 				C768F4B72A75FDA1004BDAB7 /* ShareWritingUserViewController.swift in Sources */,
 				C7D4D22B2A87A138003E3401 /* MyPageGetModel.swift in Sources */,
 				C73CAF5D2A82628E0090E0FD /* MockUpOneViewController.swift in Sources */,
+				C777368E2A91C7540074466B /* ClothImageEnrollViewController.swift in Sources */,
 				C7BDE1772A8D084C00E1FEB6 /* SingoPost.swift in Sources */,
 				C768F4BD2A760527004BDAB7 /* ShareWritingUserCollectionViewCell.swift in Sources */,
 				C7D4D2252A87273A003E3401 /* LogoutPost.swift in Sources */,
@@ -585,6 +592,7 @@
 				C76870E82A6AAEA000022FC0 /* EmailPost.swift in Sources */,
 				C7BB29512A680B74009F36F8 /* FeedSellTableViewCell.swift in Sources */,
 				C76D92E52A6C0B8C0088F2D5 /* CommunityTableViewCell.swift in Sources */,
+				C7653FBB2A8F8518001A3D92 /* NetworkResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

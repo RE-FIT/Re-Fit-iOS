@@ -1,52 +1,52 @@
 //
-//  ImageEnrollAlertViewController.swift
+//  ClothImageEnrollViewController.swift
 //  RE-FIT
 //
-//  Created by jaegu park on 12/08/23.
+//  Created by jaegu park on 20/08/23.
 //
 
 import UIKit
 
-protocol SampleProtocol:AnyObject {
+protocol SampleProtocol2:AnyObject {
     func imageSend(data: UIImage)
+    func deleteButton()
 }
 
-class ImageEnrollAlertViewController: UIViewController {
-
-    @IBOutlet weak var EnrollView: UIView!
-    @IBOutlet weak var AlbumButton: UIButton!
-    @IBOutlet weak var DeleteButton: UIButton!
+class ClothImageEnrollViewController: UIViewController {
     
-    weak var delegate : SampleProtocol?
+    @IBOutlet weak var EnrollView: UIView!
+    @IBOutlet weak var CameraButton: UIButton!
+    @IBOutlet weak var AlbumButton: UIButton!
+    
+    weak var delegate : SampleProtocol2?
     
     let imagePickerController = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         EnrollView.layer.cornerRadius = 10
         EnrollView.layer.masksToBounds = true
         
+        CameraButton.layer.cornerRadius = 10
+        CameraButton.layer.masksToBounds = true
         AlbumButton.layer.cornerRadius = 10
-        AlbumButton.layer.masksToBounds = true
-        DeleteButton.layer.cornerRadius = 10
-        DeleteButton.layer.borderWidth = 1
-        DeleteButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        AlbumButton.layer.borderWidth = 1
+        AlbumButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
         
         enrollAlertEvent()
         self.imagePickerController.delegate = self
     }
-
-    @IBAction func backButton(_ sender: Any) {
-        self.presentingViewController?.dismiss(animated: false, completion: nil)
+    
+    @IBAction func Camera_Tapped(_ sender: Any) {
+        self.openCamera()
     }
     
-    @IBAction func Select_Album(_ sender: Any) {
+    @IBAction func Album_Tapped(_ sender: Any) {
         self.openAlbum()
     }
     
-    @IBAction func Delete_Image(_ sender: Any) {
-        NotificationCenter.default.post(name: NSNotification.Name("DismissDetailView2"), object: nil, userInfo: nil)
+    @IBAction func backButton(_ sender: Any) {
         self.presentingViewController?.dismiss(animated: false, completion: nil)
     }
     
@@ -63,7 +63,7 @@ class ImageEnrollAlertViewController: UIViewController {
     }
 }
 
-extension ImageEnrollAlertViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+extension ClothImageEnrollViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func openAlbum() {
         self.imagePickerController.sourceType = .photoLibrary
         present(self.imagePickerController, animated: true, completion: nil)
@@ -72,6 +72,7 @@ extension ImageEnrollAlertViewController: UIImagePickerControllerDelegate, UINav
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             delegate?.imageSend(data: image)
+            delegate?.deleteButton()
             self.dismiss(animated: false, completion: nil)
         } else {
             print("error detected in didFinishPickinMEdiaWithInfo method")

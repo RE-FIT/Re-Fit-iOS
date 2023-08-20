@@ -10,12 +10,11 @@ import DropDown
 
 class WritingViewController: UIViewController, UITextViewDelegate {
     
-    @IBOutlet weak var PicView1: UIView!
-    @IBOutlet weak var PicView2: UIView!
-    @IBOutlet weak var PicView3: UIView!
-    @IBOutlet weak var PicView4: UIView!
-    @IBOutlet weak var PicView5: UIView!
-    
+    @IBOutlet weak var PicView1: UIImageView!
+    @IBOutlet weak var PicView2: UIImageView!
+    @IBOutlet weak var PicView3: UIImageView!
+    @IBOutlet weak var PicView4: UIImageView!
+    @IBOutlet weak var PicView5: UIImageView!
     @IBOutlet weak var ProductTextField: UITextField!
     @IBOutlet weak var GenderTextField: UITextField!
     @IBOutlet weak var CategoryTextField: UITextField!

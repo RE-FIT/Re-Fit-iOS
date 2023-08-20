@@ -8,7 +8,7 @@
 import UIKit
 import DropDown
 
-class EnrollClothesViewController: UIViewController {
+class EnrollClothesViewController: UIViewController, SampleProtocol2 {
     
     @IBOutlet weak var ClothesImage: UIImageView!
     @IBOutlet weak var CategoryView: UIView!
@@ -19,6 +19,8 @@ class EnrollClothesViewController: UIViewController {
     @IBOutlet weak var RecommendView: UIView!
     @IBOutlet weak var MonthTextField: UITextField!
     @IBOutlet weak var NumbersTextField: UITextField!
+    @IBOutlet weak var EnrollButton: UIButton!
+    @IBOutlet weak var EnrollLabel: UILabel!
     
     let dropdownMonth = DropDown()
     let dropdownNumbers = DropDown()
@@ -27,6 +29,15 @@ class EnrollClothesViewController: UIViewController {
     let Numbers1 = [" 5", " 10", " 15", " 20", " 25", " 30"]
     let Numbers2 = [" 10", " 20", " 30", " 40", " 50", " 60"]
     let Numbers3 = [" 10", " 20", " 30", " 40", " 50", " 60", " 70", " 80", " 90"]
+    
+    func imageSend(data: UIImage) {
+        ClothesImage.image = data
+    }
+    
+    func deleteButton() {
+        EnrollButton.isHidden = true
+        EnrollLabel.isHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -154,6 +165,13 @@ class EnrollClothesViewController: UIViewController {
         // 취소 시 처리
         dropdownNumbers.cancelAction = { [weak self] in
         }
+    }
+    
+    @IBAction func Enroll_Tapped(_ sender: Any) {
+        guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "ClothImageEnrollVC") as? ClothImageEnrollViewController else { return }
+        nextVC.modalPresentationStyle = .overFullScreen
+        nextVC.delegate = self
+        self.present(nextVC, animated: false)
     }
     
     @IBAction func Month_Tapped(_ sender: Any) {

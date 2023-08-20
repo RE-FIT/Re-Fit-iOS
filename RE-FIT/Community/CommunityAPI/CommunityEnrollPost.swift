@@ -8,74 +8,53 @@
 import Foundation
 import Alamofire
 
-struct CommunityEnrollModel:Encodable {
-    var title: String
-    var gender: Int
-    var postType: Int
-    var price: Int!
-    var category: Int
-    var size: Int
-    var deliveryType: Int
-    var deliveryFee: Int!
-    var detail: String
-    var address: String!
-}
-
-class APIHandlerCommunityEnrollPost {
-    static let instance = APIHandlerCommunityEnrollPost()
+struct CommunityEnrollPostService {
     
-    func SendingPostCommunityEnroll(token: String, parameters: CommunityEnrollModel, handler: @escaping (_ result: CommunityEnrollresultModel)->(Void)) {
-        let url = APIURL.communityURL
-        let headers:HTTPHeaders = [
-            "content-type": "application/json;charset=utf-8",
-            "X-ACCESS-TOKEN": "\(token)"
-        ]
+    static let shared = CommunityEnrollPostService()
+    
+    func editActivity (token: String,
+                       imageData: UIImage?,
+                       title: String,
+                       gender: Int,
+                       postType: Int,
+                       price: Int!,
+                       category: Int,
+                       size: Int,
+                       deliveryType: Int,
+                       deliveryFee: Int!,
+                       detail: String,
+                       address: String!,
+                       completion: @escaping (NetworkResult<Any>) -> Void) {
         
-        AF.request(url, method: .post, parameters: parameters, encoder: JSONParameterEncoder.default, headers: headers).response { responce in
-            switch responce.result {
-            case .success(let data):
-                print(String(decoding: data!, as: UTF8.self))
-                do {
-                    let json = try JSONSerialization.jsonObject(with: data!, options: .fragmentsAllowed)
-                    print(json)
-                    
-                    let jsonresult = try JSONDecoder().decode(CommunityEnrollresultModel.self, from: data!)
-                    handler(jsonresult)
-                    print(jsonresult)
-                } catch let DecodingError.dataCorrupted(context) {
-                    print(context)
-                } catch let DecodingError.keyNotFound(key, context) {
-                    print("Key '\(key)' not found:", context.debugDescription)
-                    print("codingPath:", context.codingPath)
-                } catch let DecodingError.valueNotFound(value, context) {
-                    print("Value '\(value)' not found:", context.debugDescription)
-                    print("codingPath:", context.codingPath)
-                } catch let DecodingError.typeMismatch(type, context)  {
-                    print("Type '\(type)' mismatch:", context.debugDescription)
-                    print("codingPath:", context.codingPath)
-                } catch {
-                    print(String(describing:error))
-                }
-            case .failure(let error):
-                print(error.localizedDescription)
+        let URL = APIURL.clothURL
+        let header : HTTPHeaders = [
+            "Content-Type" : "multipart/form-data",
+            "token" : "\(token)" ]
+        
+        let parameters: [String : Any] = [
+            "title": title,
+            "gender": gender,
+            "postType": postType,
+            "price": price ?? 0,
+            "category": category,
+            "size": size,
+            "deliveryType": deliveryType,
+            "deliveryFee": deliveryFee ?? 0,
+            "detail": detail,
+            "address": address ?? ""
+        ]
+        AF.upload(multipartFormData: { multipartFormData in
+            for (key, value) in parameters {
+                multipartFormData.append("\(value)".data(using: .utf8)!, withName: key)
             }
+            if let image = imageData?.pngData() {
+                multipartFormData.append(image, withName: "activityImage", fileName: "\(image).png", mimeType: "image/png")
+            }
+        }, to: URL, usingThreshold: UInt64.init(), method: .post, headers: header).response { response in
+            guard let statusCode = response.response?.statusCode,
+                  statusCode == 200
+            else { return }
+            completion(.success(statusCode))
         }
     }
-}
-
-struct CommunityEnrollresultModel: Codable {
-    var code: String!
-    var message: String!
-    var postId: Int
-    var title: String
-    var author: String
-    var imgUrls: [String]
-    var size: Int
-    var deliveryType: Int
-    var deliveryFee: Int
-    var address: String
-    var price: Int
-    var detail: String
-    var postType: Int
-    var postState: Int
 }

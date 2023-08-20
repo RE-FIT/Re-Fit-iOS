@@ -8,25 +8,29 @@
 import UIKit
 import DropDown
 
-class EditProfileViewController: UIViewController, UITextFieldDelegate {
-
-    @IBOutlet weak var ProfileView: UIView!
+class EditProfileViewController: UIViewController, UITextFieldDelegate, SampleProtocol {
+    
     @IBOutlet weak var EmailTextField: UITextField!
     @IBOutlet weak var IDTextField: UITextField!
     @IBOutlet weak var NameTextField: UITextField!
     @IBOutlet weak var BDTextField: UITextField!
     @IBOutlet weak var GenderTextField: UITextField!
+    @IBOutlet weak var ProfileImage: UIImageView!
     
     let dropdown = DropDown()
     
     let Gender = [" 남자", " 여자"]
     
+    func imageSend(data: UIImage) {
+        ProfileImage.image = data
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ProfileView.layer.cornerRadius = self.ProfileView.frame.size.height / 2
-        ProfileView.layer.masksToBounds = true
-        ProfileView.clipsToBounds = false
+        ProfileImage.layer.cornerRadius = self.ProfileImage.frame.size.height / 2
+        ProfileImage.layer.masksToBounds = true
+        ProfileImage.clipsToBounds = true
         
         IDTextField.layer.cornerRadius = 5
         IDTextField.layer.borderWidth = 1
@@ -64,6 +68,19 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
         
         initUI()
         setDropdown()
+        
+        NotificationCenter.default.addObserver(
+                  self,
+                  selector: #selector(self.didDismissDetailNotification(_:)),
+                  name: NSNotification.Name("DismissDetailView2"),
+                  object: nil
+                  )
+    }
+    
+    @objc func didDismissDetailNotification(_ notification: Notification) {
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) {
+            self.ProfileImage.image = UIImage(named: "Default")
+        }
     }
     
     func initUI() {
@@ -124,6 +141,7 @@ class EditProfileViewController: UIViewController, UITextFieldDelegate {
             return
         }
         svc1.modalPresentationStyle = .overFullScreen
+        svc1.delegate = self
         self.present(svc1, animated: false)
     }
 }
