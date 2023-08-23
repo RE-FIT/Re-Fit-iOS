@@ -830,8 +830,11 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled">
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Bottom_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="JTs-5n-3LA"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-fK-rW3">
                                                         <rect key="frame" x="139" y="36" width="35" height="36"/>
@@ -841,8 +844,11 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled">
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Outer_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="ZHS-NM-0G9"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAz-Bq-aOJ">
                                                         <rect key="frame" x="29" y="36" width="35" height="36"/>
@@ -852,8 +858,11 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled">
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Top_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="IfD-qC-Pgf"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CoI-1r-3gQ">
                                                         <rect key="frame" x="194" y="36" width="35" height="36"/>
@@ -863,8 +872,11 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled">
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Onepiece_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="tMt-by-hal"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCc-FO-wsQ">
                                                         <rect key="frame" x="249" y="36" width="35" height="36"/>
@@ -874,8 +886,11 @@
                                                         </constraints>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="filled">
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Shoe_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="VvI-tQ-KJd"/>
+                                                        </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="상의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iRe-on-qog">
                                                         <rect key="frame" x="37" y="47" width="21" height="15"/>
@@ -884,7 +899,7 @@
                                                             <constraint firstAttribute="height" constant="15" id="a8E-Ri-Fdv"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="하의" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0i-Lt-VjE">
@@ -894,7 +909,7 @@
                                                             <constraint firstAttribute="width" constant="21" id="iVU-jB-wvv"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="아우터" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76y-KL-yYu">
@@ -904,7 +919,7 @@
                                                             <constraint firstAttribute="width" constant="26" id="O3u-Vs-geM"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="신발" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YgE-fd-kBT">
@@ -914,7 +929,7 @@
                                                             <constraint firstAttribute="height" constant="15" id="Pv8-Lx-oKt"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="11"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="원피스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4N-HD-xHL">
@@ -924,7 +939,7 @@
                                                             <constraint firstAttribute="width" constant="26" id="vyh-7o-dgw"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-SemiBold" family="Apple SD Gothic Neo" pointSize="10"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <color key="textColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
@@ -976,8 +991,11 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="Select_Season_Grey" title="   봄 (3-5월) / 가을 (9-11월)" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="SpringFall_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="Vwz-wa-4xx"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oEE-Y3-y5b">
                                                         <rect key="frame" x="30" y="122" width="253" height="36"/>
@@ -988,8 +1006,11 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="Select_Season_Grey" title="   겨울 (12-2월)" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Winter_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="hND-NV-N3e"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p0e-bQ-0Sl">
                                                         <rect key="frame" x="30" y="78" width="253" height="36"/>
@@ -1000,8 +1021,11 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="Select_Season_Grey" title="   여름 (6-8월)" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Summer_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="7Cw-Tx-UFO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1042,8 +1066,11 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="Select_Season_Grey" title="   아뇨, 당분간 안 입어요!" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="No_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="fWf-HE-ib8"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3z1-M4-bBf">
                                                         <rect key="frame" x="30" y="58" width="253" height="36"/>
@@ -1054,8 +1081,11 @@
                                                         <buttonConfiguration key="configuration" style="filled" image="Select_Season_Grey" title="   네, 입을래요!" cornerStyle="large">
                                                             <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                                             <color key="baseForegroundColor" red="0.66320317979999999" green="0.68557083610000003" blue="0.71765178439999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                            <color key="baseBackgroundColor" name="MainColor"/>
+                                                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="Yes_Tapped:" destination="IsX-3O-L2y" eventType="touchUpInside" id="rcF-rE-G3W"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1343,16 +1373,31 @@
                     <size key="freeformSize" width="393" height="1388"/>
                     <connections>
                         <outlet property="AlarmView" destination="9hG-0W-rQF" id="p0a-5u-a69"/>
+                        <outlet property="BottomButton" destination="6Q6-V8-rZe" id="gbp-VN-hnz"/>
+                        <outlet property="BottomLabel" destination="c0i-Lt-VjE" id="Rme-V0-suB"/>
                         <outlet property="CategoryView" destination="5Jm-J0-GkT" id="392-Rn-1Pn"/>
                         <outlet property="ClothesImage" destination="2x5-en-GAb" id="fuc-K6-H2W"/>
                         <outlet property="EnrollButton" destination="8fg-QQ-jjc" id="81G-Zu-k5J"/>
                         <outlet property="EnrollLabel" destination="oG8-5v-0Ee" id="XTr-su-Moz"/>
                         <outlet property="GoalView" destination="9Fb-dP-Qa8" id="aR5-IM-AwX"/>
                         <outlet property="MonthTextField" destination="hjy-bP-czo" id="gOi-6S-0jV"/>
+                        <outlet property="NoButton" destination="cZP-7k-zFT" id="Q1Q-jw-Q8N"/>
                         <outlet property="NumbersTextField" destination="BMp-LY-sjE" id="eSJ-TV-XSv"/>
+                        <outlet property="OnepieceButton" destination="CoI-1r-3gQ" id="rAK-jW-0W5"/>
+                        <outlet property="OnepieceLabel" destination="e4N-HD-xHL" id="oce-Ia-e4F"/>
+                        <outlet property="OuterButton" destination="gxh-fK-rW3" id="OLD-XE-iwa"/>
+                        <outlet property="OuterLabel" destination="76y-KL-yYu" id="pew-8c-pFa"/>
                         <outlet property="PlanView" destination="dwZ-PW-EwR" id="G8u-E6-kgh"/>
                         <outlet property="RecommendView" destination="SLz-hx-mgm" id="nKl-L9-bSZ"/>
                         <outlet property="SeasonView" destination="Aed-vC-l3M" id="l8X-p7-B6Z"/>
+                        <outlet property="ShoeButton" destination="uCc-FO-wsQ" id="MPP-iu-MW5"/>
+                        <outlet property="ShoeLabel" destination="YgE-fd-kBT" id="jDC-nY-DXd"/>
+                        <outlet property="SpringFall" destination="2x7-lg-KZv" id="u92-vC-fWD"/>
+                        <outlet property="Summer" destination="p0e-bQ-0Sl" id="Agn-0I-gRx"/>
+                        <outlet property="TopButton" destination="eAz-Bq-aOJ" id="SVp-FL-1YQ"/>
+                        <outlet property="TopLabel" destination="iRe-on-qog" id="E3v-yc-vHR"/>
+                        <outlet property="Winter" destination="oEE-Y3-y5b" id="fIW-kH-RfR"/>
+                        <outlet property="YesButton" destination="3z1-M4-bBf" id="8rr-6T-nQD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nbz-4H-j2P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

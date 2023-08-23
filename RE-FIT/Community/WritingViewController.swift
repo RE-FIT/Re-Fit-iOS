@@ -15,6 +15,16 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var PicView3: UIImageView!
     @IBOutlet weak var PicView4: UIImageView!
     @IBOutlet weak var PicView5: UIImageView!
+    @IBOutlet weak var PicButton1: UIButton!
+    @IBOutlet weak var PicButton2: UIButton!
+    @IBOutlet weak var PicButton3: UIButton!
+    @IBOutlet weak var PicButton4: UIButton!
+    @IBOutlet weak var PicButton5: UIButton!
+    @IBOutlet weak var PicLabel1: UILabel!
+    @IBOutlet weak var PicLabel2: UILabel!
+    @IBOutlet weak var PicLabel3: UILabel!
+    @IBOutlet weak var PicLabel4: UILabel!
+    @IBOutlet weak var PicLabel5: UILabel!
     @IBOutlet weak var ProductTextField: UITextField!
     @IBOutlet weak var GenderTextField: UITextField!
     @IBOutlet weak var CategoryTextField: UITextField!
@@ -22,6 +32,9 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var HowTextField: UITextField!
     @IBOutlet weak var PriceTextField: UITextField!
     @IBOutlet weak var DetailTextView: UITextView!
+    
+    @IBOutlet weak var HowView: UIStackView!
+    @IBOutlet weak var HopeView: UIStackView!
     
     @IBOutlet weak var ShareButton: UIButton!
     @IBOutlet weak var SellButton: UIButton!
@@ -39,6 +52,9 @@ class WritingViewController: UIViewController, UITextViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PriceTextField.isHidden = true
+        HopeView.isHidden = true
         
         PicView1.layer.cornerRadius = 10
         PicView1.layer.masksToBounds = true

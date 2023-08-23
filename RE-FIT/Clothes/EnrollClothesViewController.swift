@@ -11,9 +11,28 @@ import DropDown
 class EnrollClothesViewController: UIViewController, SampleProtocol2 {
     
     @IBOutlet weak var ClothesImage: UIImageView!
+    
     @IBOutlet weak var CategoryView: UIView!
+    @IBOutlet weak var TopLabel: UILabel!
+    @IBOutlet weak var BottomLabel: UILabel!
+    @IBOutlet weak var OuterLabel: UILabel!
+    @IBOutlet weak var OnepieceLabel: UILabel!
+    @IBOutlet weak var ShoeLabel: UILabel!
+    @IBOutlet weak var TopButton: UIButton!
+    @IBOutlet weak var BottomButton: UIButton!
+    @IBOutlet weak var OuterButton: UIButton!
+    @IBOutlet weak var OnepieceButton: UIButton!
+    @IBOutlet weak var ShoeButton: UIButton!
+    
     @IBOutlet weak var SeasonView: UIView!
+    @IBOutlet weak var SpringFall: UIButton!
+    @IBOutlet weak var Summer: UIButton!
+    @IBOutlet weak var Winter: UIButton!
+    
     @IBOutlet weak var PlanView: UIView!
+    @IBOutlet weak var YesButton: UIButton!
+    @IBOutlet weak var NoButton: UIButton!
+    
     @IBOutlet weak var AlarmView: UIView!
     @IBOutlet weak var GoalView: UIView!
     @IBOutlet weak var RecommendView: UIView!
@@ -57,6 +76,49 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
         GoalView.layer.masksToBounds = true
         RecommendView.layer.cornerRadius = 10
         RecommendView.layer.masksToBounds = true
+        
+        TopButton.layer.cornerRadius = 10
+        TopButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        TopButton.layer.borderWidth = 1.0
+        TopButton.layer.masksToBounds = true
+        BottomButton.layer.cornerRadius = 10
+        BottomButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        BottomButton.layer.borderWidth = 1.0
+        BottomButton.layer.masksToBounds = true
+        OuterButton.layer.cornerRadius = 10
+        OuterButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        OuterButton.layer.borderWidth = 1.0
+        OuterButton.layer.masksToBounds = true
+        OnepieceButton.layer.cornerRadius = 10
+        OnepieceButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        OnepieceButton.layer.borderWidth = 1.0
+        OnepieceButton.layer.masksToBounds = true
+        ShoeButton.layer.cornerRadius = 10
+        ShoeButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        ShoeButton.layer.borderWidth = 1.0
+        ShoeButton.layer.masksToBounds = true
+        
+        SpringFall.layer.cornerRadius = 10
+        SpringFall.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        SpringFall.layer.borderWidth = 1.0
+        SpringFall.layer.masksToBounds = true
+        Summer.layer.cornerRadius = 10
+        Summer.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        Summer.layer.borderWidth = 1.0
+        Summer.layer.masksToBounds = true
+        Winter.layer.cornerRadius = 10
+        Winter.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        Winter.layer.borderWidth = 1.0
+        Winter.layer.masksToBounds = true
+        
+        YesButton.layer.cornerRadius = 10
+        YesButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        YesButton.layer.borderWidth = 1.0
+        YesButton.layer.masksToBounds = true
+        NoButton.layer.cornerRadius = 10
+        NoButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        NoButton.layer.borderWidth = 1.0
+        NoButton.layer.masksToBounds = true
         
         MonthTextField.layer.cornerRadius = 10
         MonthTextField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor
@@ -164,6 +226,116 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
         
         // 취소 시 처리
         dropdownNumbers.cancelAction = { [weak self] in
+        }
+    }
+    
+    @IBAction func Top_Tapped(_ sender: Any) {
+        if TopButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            TopLabel.textColor = UIColor(named: "MainColor")
+            TopButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            TopLabel.textColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            TopButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Bottom_Tapped(_ sender: Any) {
+        if BottomButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            BottomLabel.textColor = UIColor(named: "MainColor")
+            BottomButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            BottomLabel.textColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            BottomButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Outer_Tapped(_ sender: Any) {
+        if OuterButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            OuterLabel.textColor = UIColor(named: "MainColor")
+            OuterButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            OuterLabel.textColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            OuterButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Onepiece_Tapped(_ sender: Any) {
+        if OnepieceButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            OnepieceLabel.textColor = UIColor(named: "MainColor")
+            OnepieceButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            OnepieceLabel.textColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            OnepieceButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Shoe_Tapped(_ sender: Any) {
+        if ShoeButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            ShoeLabel.textColor = UIColor(named: "MainColor")
+            ShoeButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            ShoeLabel.textColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            ShoeButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func SpringFall_Tapped(_ sender: Any) {
+        if SpringFall.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            SpringFall.configuration?.image = UIImage(named: "Select_Season")
+            SpringFall.configuration?.baseForegroundColor = UIColor(named: "MainColor")
+            SpringFall.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            SpringFall.configuration?.image = UIImage(named: "Select_Season_Grey")
+            SpringFall.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            SpringFall.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Summer_Tapped(_ sender: Any) {
+        if Summer.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            Summer.configuration?.image = UIImage(named: "Select_Season")
+            Summer.configuration?.baseForegroundColor = UIColor(named: "MainColor")
+            Summer.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            Summer.configuration?.image = UIImage(named: "Select_Season_Grey")
+            Summer.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            Summer.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Winter_Tapped(_ sender: Any) {
+        if Winter.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            Winter.configuration?.image = UIImage(named: "Select_Season")
+            Winter.configuration?.baseForegroundColor = UIColor(named: "MainColor")
+            Winter.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            Winter.configuration?.image = UIImage(named: "Select_Season_Grey")
+            Winter.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            Winter.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func Yes_Tapped(_ sender: Any) {
+        if YesButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            YesButton.configuration?.image = UIImage(named: "Select_Season")
+            YesButton.configuration?.baseForegroundColor = UIColor(named: "MainColor")
+            YesButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            YesButton.configuration?.image = UIImage(named: "Select_Season_Grey")
+            YesButton.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            YesButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+        }
+    }
+    
+    @IBAction func No_Tapped(_ sender: Any) {
+        if NoButton.layer.borderColor == UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor {
+            NoButton.configuration?.image = UIImage(named: "Select_Season")
+            NoButton.configuration?.baseForegroundColor = UIColor(named: "MainColor")
+            NoButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+        } else {
+            NoButton.configuration?.image = UIImage(named: "Select_Season_Grey")
+            NoButton.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
+            NoButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
         }
     }
     
