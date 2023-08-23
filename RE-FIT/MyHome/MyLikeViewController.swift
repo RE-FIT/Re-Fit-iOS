@@ -10,6 +10,8 @@ import UIKit
 class MyLikeViewController: UIViewController {
     
     @IBOutlet weak var LikeSC: UISegmentedControl!
+    @IBOutlet weak var SellView: UIView!
+    @IBOutlet weak var ShareView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +27,19 @@ class MyLikeViewController: UIViewController {
         
         LikeSC.setTitleTextAttributes([NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.black], for: .normal)
         LikeSC.setTitleTextAttributes([NSAttributedString.Key.font: font, NSAttributedString.Key.foregroundColor: UIColor.white], for: .selected)
+        
+        SellView.alpha = 1
+        ShareView.alpha = 0
+    }
+    
+    @IBAction func Segment_Tapped(_ sender: Any) {
+        if (sender as AnyObject).selectedSegmentIndex == 0 {
+            SellView.alpha = 1
+            ShareView.alpha = 0
+        }
+        else if (sender as AnyObject).selectedSegmentIndex == 1 {
+            SellView.alpha = 0
+            ShareView.alpha = 1
+        }
     }
 }
