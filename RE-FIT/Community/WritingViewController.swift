@@ -8,7 +8,12 @@
 import UIKit
 import DropDown
 
-class WritingViewController: UIViewController, UITextViewDelegate {
+class WritingViewController: UIViewController, UITextViewDelegate, SampleProtocol4 {
+    
+    func addressSend(data: String) {
+        AddressTextField.text = data
+        AddressTextField.sizeToFit()
+    }
     
     @IBOutlet weak var PicView1: UIImageView!
     @IBOutlet weak var PicView2: UIImageView!
@@ -32,13 +37,22 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var HowTextField: UITextField!
     @IBOutlet weak var PriceTextField: UITextField!
     @IBOutlet weak var DetailTextView: UITextView!
+    @IBOutlet weak var PriceTextField2: UITextField!
+    @IBOutlet weak var AddressTextField: UITextField!
     
-    @IBOutlet weak var HowView: UIStackView!
     @IBOutlet weak var HopeView: UIStackView!
+    @IBOutlet weak var PlaceView: UIStackView!
     
     @IBOutlet weak var ShareButton: UIButton!
     @IBOutlet weak var SellButton: UIButton!
     
+    @IBOutlet weak var DeliveryFeeButton: UIButton!
+    @IBOutlet weak var DeliveryFeeLabel: UILabel!
+    @IBOutlet weak var DeliveryFeeButton2: UIButton!
+    @IBOutlet weak var DeliveryFeeLabel2: UILabel!
+    @IBOutlet weak var InsertButton: UIButton!
+    @IBOutlet weak var InsertLabel: UILabel!
+    @IBOutlet weak var PriceLabel: UILabel!
     
     let dropdownGender = DropDown()
     let dropdownCategory = DropDown()
@@ -54,7 +68,16 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         super.viewDidLoad()
         
         PriceTextField.isHidden = true
+        PriceTextField2.isHidden = true
         HopeView.isHidden = true
+        PlaceView.isHidden = true
+        DeliveryFeeButton.isHidden = true
+        DeliveryFeeLabel.isHidden = true
+        DeliveryFeeButton2.isHidden = true
+        DeliveryFeeLabel2.isHidden = true
+        InsertButton.isHidden = true
+        InsertLabel.isHidden = true
+        PriceLabel.isHidden = true
         
         PicView1.layer.cornerRadius = 10
         PicView1.layer.masksToBounds = true
@@ -129,11 +152,25 @@ class WritingViewController: UIViewController, UITextViewDelegate {
             ShareButton.configuration?.baseForegroundColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
             ShareButton.backgroundColor = UIColor.white
             ShareButton.tintColor = .clear
+            HowTextField.text = " 거래 희망 방식"
+            HowTextField.textColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
+            SellButton.isEnabled = true
+            HopeView.isHidden = true
+            PlaceView.isHidden = true
+            PriceTextField.isHidden = true
+            DeliveryFeeButton.isHidden = true
+            DeliveryFeeLabel.isHidden = true
+            DeliveryFeeButton2.isHidden = true
+            DeliveryFeeLabel2.isHidden = true
+            InsertButton.isHidden = true
+            InsertLabel.isHidden = true
         } else {
             ShareButton.isSelected = true
             ShareButton.configuration?.baseForegroundColor = UIColor.white
             ShareButton.backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
             ShareButton.tintColor = .clear
+            SellButton.isEnabled = false
+            HopeView.isHidden = false
         }
     }
     
@@ -141,13 +178,49 @@ class WritingViewController: UIViewController, UITextViewDelegate {
         if (SellButton.configuration?.baseForegroundColor == UIColor.white) {
             SellButton.isSelected = false
             SellButton.configuration?.baseForegroundColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
-            SellButton.backgroundColor = UIColor.white
+            SellButton.configuration?.baseBackgroundColor = UIColor.white
             SellButton.tintColor = .clear
+            ShareButton.isEnabled = true
+            HopeView.isHidden = true
+            PlaceView.isHidden = true
+            PriceTextField2.isHidden = true
+            DeliveryFeeButton.isHidden = true
+            DeliveryFeeLabel.isHidden = true
+            DeliveryFeeButton2.isHidden = true
+            DeliveryFeeLabel2.isHidden = true
+            InsertButton.isHidden = true
+            InsertLabel.isHidden = true
         } else {
             SellButton.isSelected = true
             SellButton.configuration?.baseForegroundColor = UIColor.white
-            SellButton.backgroundColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1)
+            SellButton.configuration?.baseBackgroundColor = UIColor(named: "MainColor")
             SellButton.tintColor = .clear
+            ShareButton.isEnabled = false
+            HopeView.isHidden = false
+        }
+    }
+    
+    @IBAction func Delivery_Included(_ sender: Any) {
+        if (DeliveryFeeButton.configuration?.image == UIImage(named: "Green_Icon")) {
+            DeliveryFeeButton.isSelected = false
+            DeliveryFeeButton.configuration?.image = UIImage(named: "Circle_Icon")
+            DeliveryFeeButton.tintColor = .clear
+        } else {
+            DeliveryFeeButton.isSelected = true
+            DeliveryFeeButton.configuration?.image = UIImage(named: "Green_Icon")
+            DeliveryFeeButton.tintColor = .clear
+        }
+    }
+    
+    @IBAction func Delivery_NotIncluded(_ sender: Any) {
+        if (DeliveryFeeButton2.configuration?.image == UIImage(named: "Green_Icon")) {
+            DeliveryFeeButton2.isSelected = false
+            DeliveryFeeButton2.configuration?.image = UIImage(named: "Circle_Icon")
+            DeliveryFeeButton2.tintColor = .clear
+        } else {
+            DeliveryFeeButton2.isSelected = true
+            DeliveryFeeButton2.configuration?.image = UIImage(named: "Green_Icon")
+            DeliveryFeeButton2.tintColor = .clear
         }
     }
     
@@ -306,6 +379,51 @@ class WritingViewController: UIViewController, UITextViewDelegate {
             self!.HowTextField.layer.borderColor = UIColor.white.cgColor
             self!.HowTextField.layer.borderWidth = 1.0
             self!.HowTextField.layer.masksToBounds = true
+            if index == 0 {
+                if (self?.ShareButton.configuration?.baseForegroundColor == UIColor.white) {
+                    self?.PlaceView.isHidden = false
+                    self?.PriceTextField.isHidden = true
+                    self?.PriceTextField2.isHidden = true
+                    self?.DeliveryFeeButton.isHidden = true
+                    self?.DeliveryFeeLabel.isHidden = true
+                    self?.DeliveryFeeButton2.isHidden = true
+                    self?.DeliveryFeeLabel2.isHidden = true
+                    self?.InsertButton.isHidden = true
+                    self?.InsertLabel.isHidden = true
+                } else {
+                    self?.PlaceView.isHidden = false
+                    self?.PriceTextField.isHidden = true
+                    self?.PriceTextField2.isHidden = false
+                    self?.DeliveryFeeButton.isHidden = true
+                    self?.DeliveryFeeLabel.isHidden = true
+                    self?.DeliveryFeeButton2.isHidden = true
+                    self?.DeliveryFeeLabel2.isHidden = true
+                    self?.InsertButton.isHidden = true
+                    self?.InsertLabel.isHidden = true
+                }
+            } else if index == 1 {
+                if (self?.ShareButton.configuration?.baseForegroundColor == UIColor.white) {
+                    self?.PlaceView.isHidden = true
+                    self?.PriceTextField.isHidden = false
+                    self?.PriceTextField2.isHidden = true
+                    self?.DeliveryFeeButton.isHidden = false
+                    self?.DeliveryFeeLabel.isHidden = false
+                    self?.DeliveryFeeButton2.isHidden = false
+                    self?.DeliveryFeeLabel2.isHidden = false
+                    self?.InsertButton.isHidden = false
+                    self?.InsertLabel.isHidden = false
+                } else {
+                    self?.PlaceView.isHidden = true
+                    self?.PriceTextField.isHidden = true
+                    self?.PriceTextField2.isHidden = false
+                    self?.DeliveryFeeButton.isHidden = false
+                    self?.DeliveryFeeLabel.isHidden = false
+                    self?.DeliveryFeeButton2.isHidden = false
+                    self?.DeliveryFeeLabel2.isHidden = false
+                    self?.InsertButton.isHidden = false
+                    self?.InsertLabel.isHidden = false
+                }
+            }
         }
         
         // 취소 시 처리
@@ -328,6 +446,16 @@ class WritingViewController: UIViewController, UITextViewDelegate {
     @IBAction func How_Tapped(_ sender: Any) {
         dropdownHow.show()
     }
+    
+    @IBAction func Address_Tapped(_ sender: Any) {
+        guard let svc2 = self.storyboard?.instantiateViewController(identifier: "AddressVC") as? AddressViewController else {
+            return
+        }
+        svc2.delegate = self
+        
+        self.present(svc2, animated: true)
+    }
+    
 
     @IBAction func Insert_Price(_ sender: Any) {
         guard let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "PriceVC") as? PriceViewController else { return }

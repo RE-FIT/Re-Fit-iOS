@@ -3,4 +3,294 @@
    uuid = "1E4E270A-CB8F-426D-ABD9-22D0E6693260"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RE-FIT/Community/WritingViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "WritingViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - b6422227b0b48999"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.SizeTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 1a43059a995aa595"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.SizeTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - ad56fb0647e0e29a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.SizeTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 8328c4710831dbad"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.SizeTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 45665fd9eec33005"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RE_FIT.WritingViewController"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1235">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - a8545a6aaa26731e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RE_FIT.WritingViewController&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "31"
+                  endingLineNumber = "31"
+                  offsetFromSymbolStart = "1183">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 9c4e5ddd3f7fba40"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 277d5999506dd654"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 20432dfd22bf1f47"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 5e4d952bf4fc1830"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 45665fd9eec3306a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RE_FIT.WritingViewController"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1338">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - a8545a6aaa267371"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RE_FIT.WritingViewController&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "1286">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 9c4e5ddd3f7f45e5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.getter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "85">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 277d5999506d29f1"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.setter : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "136">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 20432dfd22bfe0e2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.modify : Swift.Optional&lt;__C.UITextField&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 5e4d952bf4fce795"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.HowTextField.modify : Swift.Optional&lt;__C.UITextField&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - 45665fd9eec3cfcf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; RE_FIT.WritingViewController"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1368">
+               </Location>
+               <Location
+                  uuid = "0A1483F1-CA82-48FA-A8CA-62B369A9DABD - a8545a6aaa268cd4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "RE_FIT.WritingViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;RE_FIT.WritingViewController&gt;"
+                  moduleName = "RE-FIT"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jaegupark/Desktop/REFIT_iOS/RE-FIT/RE-FIT/Community/WritingViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1316">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
