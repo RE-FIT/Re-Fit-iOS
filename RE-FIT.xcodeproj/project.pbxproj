@@ -14,6 +14,7 @@
 		C70EDA812A935DCC00ED5EE5 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EDA802A935DCC00ED5EE5 /* SearchResultViewController.swift */; };
 		C70EDA832A935DFE00ED5EE5 /* SearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70EDA822A935DFE00ED5EE5 /* SearchResultTableViewCell.swift */; };
 		C70EDA862A93702100ED5EE5 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = C70EDA852A93702100ED5EE5 /* MessageKit */; };
+		C71A5ED62A9B531300CBF325 /* AddressViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71A5ED52A9B531300CBF325 /* AddressViewController.swift */; };
 		C726406E2A713E6600CEBFFA /* WritingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C726406D2A713E6600CEBFFA /* WritingViewController.swift */; };
 		C732F6DB2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732F6DA2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift */; };
 		C732F6DD2A7FA99500C26F97 /* NoUserAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C732F6DC2A7FA99500C26F97 /* NoUserAlertViewController.swift */; };
@@ -108,6 +109,7 @@
 		C70EDA7E2A935DC100ED5EE5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		C70EDA802A935DCC00ED5EE5 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		C70EDA822A935DFE00ED5EE5 /* SearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultTableViewCell.swift; sourceTree = "<group>"; };
+		C71A5ED52A9B531300CBF325 /* AddressViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressViewController.swift; sourceTree = "<group>"; };
 		C726406D2A713E6600CEBFFA /* WritingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritingViewController.swift; sourceTree = "<group>"; };
 		C732F6DA2A7F5E6C00C26F97 /* TreeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreeCollectionViewCell.swift; sourceTree = "<group>"; };
 		C732F6DC2A7FA99500C26F97 /* NoUserAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoUserAlertViewController.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				C70EDA7E2A935DC100ED5EE5 /* SearchViewController.swift */,
 				C70EDA802A935DCC00ED5EE5 /* SearchResultViewController.swift */,
 				C70EDA822A935DFE00ED5EE5 /* SearchResultTableViewCell.swift */,
+				C71A5ED52A9B531300CBF325 /* AddressViewController.swift */,
 			);
 			path = Community;
 			sourceTree = "<group>";
@@ -568,6 +571,7 @@
 				C768F4B92A75FDAE004BDAB7 /* SingoAlertViewController.swift in Sources */,
 				C7FFB8C22A66C9C5000B7D87 /* FeedSellViewController.swift in Sources */,
 				C7B7B4B12A5FA8E500584E76 /* SettingsViewController.swift in Sources */,
+				C71A5ED62A9B531300CBF325 /* AddressViewController.swift in Sources */,
 				C79B5AA62A4D605A00A8B485 /* ViewController.swift in Sources */,
 				C79909942A5E522100296DEC /* FindIDViewController.swift in Sources */,
 				C76D92E92A6E01D20088F2D5 /* ShareWritingCollectionViewCell.swift in Sources */,
