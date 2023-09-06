@@ -178,7 +178,7 @@ class WritingViewController: UIViewController, UITextViewDelegate, SampleProtoco
         if (SellButton.configuration?.baseForegroundColor == UIColor.white) {
             SellButton.isSelected = false
             SellButton.configuration?.baseForegroundColor = UIColor(red: 95/255, green: 102/255, blue: 111/255, alpha: 1.0)
-            SellButton.configuration?.baseBackgroundColor = UIColor.white
+            SellButton.backgroundColor = UIColor.white
             SellButton.tintColor = .clear
             ShareButton.isEnabled = true
             HopeView.isHidden = true
@@ -193,7 +193,7 @@ class WritingViewController: UIViewController, UITextViewDelegate, SampleProtoco
         } else {
             SellButton.isSelected = true
             SellButton.configuration?.baseForegroundColor = UIColor.white
-            SellButton.configuration?.baseBackgroundColor = UIColor(named: "MainColor")
+            SellButton.backgroundColor = UIColor(named: "MainColor")
             SellButton.tintColor = .clear
             ShareButton.isEnabled = false
             HopeView.isHidden = false
@@ -222,6 +222,10 @@ class WritingViewController: UIViewController, UITextViewDelegate, SampleProtoco
             DeliveryFeeButton2.configuration?.image = UIImage(named: "Green_Icon")
             DeliveryFeeButton2.tintColor = .clear
         }
+    }
+    
+    @IBAction func backButton(_ sender: Any) {
+        self.presentingViewController?.dismiss(animated: false, completion: nil)
     }
     
     func textViewDidBeginEditing(_ textView: UITextView) {

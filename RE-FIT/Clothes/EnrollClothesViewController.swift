@@ -41,6 +41,9 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
     @IBOutlet weak var EnrollButton: UIButton!
     @IBOutlet weak var EnrollLabel: UILabel!
     
+    @IBOutlet weak var MonthButton: UIButton!
+    @IBOutlet weak var NumberButton: UIButton!
+    
     let dropdownMonth = DropDown()
     let dropdownNumbers = DropDown()
     
@@ -60,6 +63,11 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        PlanView.isHidden = true
+        AlarmView.isHidden = true
+        GoalView.isHidden = true
+        RecommendView.isHidden = true
         
         ClothesImage.layer.cornerRadius = 10
         ClothesImage.layer.masksToBounds = true
@@ -110,6 +118,9 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
         Winter.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
         Winter.layer.borderWidth = 1.0
         Winter.layer.masksToBounds = true
+        changeDisableButtonColor(button: SpringFall, color: .white)
+        changeDisableButtonColor(button: Summer, color: .white)
+        changeDisableButtonColor(button: Winter, color: .white)
         
         YesButton.layer.cornerRadius = 10
         YesButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
@@ -128,6 +139,8 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
         NumbersTextField.layer.borderColor = UIColor(red: 36/255, green: 117/255, blue: 53/255, alpha: 1).cgColor
         NumbersTextField.layer.borderWidth = 1.0
         NumbersTextField.layer.masksToBounds = true
+        
+        NumberButton.isEnabled = false
         
         initUIMonth()
         initUINumbers()
@@ -158,6 +171,20 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
         super.viewWillDisappear(animated)
         
         navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
+    func changeDisableButtonColor(button: UIButton, color: UIColor) {
+        let rect = CGRect(x: 0.0, y: 0.0, width: button.frame.width, height: button.frame.height)
+        UIGraphicsBeginImageContext(rect.size)
+        
+        let context = UIGraphicsGetCurrentContext()
+        context?.setFillColor(color.cgColor)
+        context?.fill(rect)
+        
+        let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        button.setBackgroundImage(image, for: .disabled)
     }
     
     func initUIMonth() {
@@ -196,10 +223,13 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
             self!.MonthTextField.text = " \(item)"
             if index == 0 {
                 self?.dropdownNumbers.dataSource = self!.Numbers1
+                self?.NumberButton.isEnabled = true
             } else if index == 1 {
                 self?.dropdownNumbers.dataSource = self!.Numbers2
+                self?.NumberButton.isEnabled = true
             } else if index == 2 {
                 self?.dropdownNumbers.dataSource = self!.Numbers3
+                self?.NumberButton.isEnabled = true
             }
         }
         
@@ -222,6 +252,7 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
         dropdownNumbers.selectionAction = { [weak self] (index, item) in
             //선택한 Item을 TextField에 넣어준다.
             self!.NumbersTextField.text = " \(item)"
+            self?.RecommendView.isHidden = false
         }
         
         // 취소 시 처리
@@ -284,10 +315,18 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
             SpringFall.configuration?.image = UIImage(named: "Select_Season")
             SpringFall.configuration?.baseForegroundColor = UIColor(named: "MainColor")
             SpringFall.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+            GoalView.isHidden = false
+            Summer.isEnabled = false
+            Summer.configuration?.baseBackgroundColor = .white
+            Winter.isEnabled = false
+            Winter.configuration?.baseBackgroundColor = .white
         } else {
             SpringFall.configuration?.image = UIImage(named: "Select_Season_Grey")
             SpringFall.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
             SpringFall.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+            GoalView.isHidden = true
+            Summer.isEnabled = true
+            Winter.isEnabled = true
         }
     }
     
@@ -296,10 +335,16 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
             Summer.configuration?.image = UIImage(named: "Select_Season")
             Summer.configuration?.baseForegroundColor = UIColor(named: "MainColor")
             Summer.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+            PlanView.isHidden = false
+            SpringFall.isEnabled = false
+            Winter.isEnabled = false
         } else {
             Summer.configuration?.image = UIImage(named: "Select_Season_Grey")
             Summer.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
             Summer.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+            PlanView.isHidden = true
+            SpringFall.isEnabled = true
+            Winter.isEnabled = true
         }
     }
     
@@ -308,10 +353,16 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
             Winter.configuration?.image = UIImage(named: "Select_Season")
             Winter.configuration?.baseForegroundColor = UIColor(named: "MainColor")
             Winter.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+            PlanView.isHidden = false
+            SpringFall.isEnabled = false
+            Summer.isEnabled = false
         } else {
             Winter.configuration?.image = UIImage(named: "Select_Season_Grey")
             Winter.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
             Winter.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+            PlanView.isHidden = true
+            SpringFall.isEnabled = true
+            Summer.isEnabled = true
         }
     }
     
@@ -320,10 +371,14 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
             YesButton.configuration?.image = UIImage(named: "Select_Season")
             YesButton.configuration?.baseForegroundColor = UIColor(named: "MainColor")
             YesButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+            GoalView.isHidden = false
+            NoButton.isEnabled = false
         } else {
             YesButton.configuration?.image = UIImage(named: "Select_Season_Grey")
             YesButton.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
             YesButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+            GoalView.isHidden = true
+            NoButton.isEnabled = true
         }
     }
     
@@ -332,10 +387,14 @@ class EnrollClothesViewController: UIViewController, SampleProtocol2 {
             NoButton.configuration?.image = UIImage(named: "Select_Season")
             NoButton.configuration?.baseForegroundColor = UIColor(named: "MainColor")
             NoButton.layer.borderColor = UIColor(named: "MainColor")?.cgColor
+            AlarmView.isHidden = false
+            YesButton.isEnabled = false
         } else {
             NoButton.configuration?.image = UIImage(named: "Select_Season_Grey")
             NoButton.configuration?.baseForegroundColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1)
             NoButton.layer.borderColor = UIColor(red: 168/255, green: 175/255, blue: 184/255, alpha: 1).cgColor
+            AlarmView.isHidden = true
+            YesButton.isEnabled = true
         }
     }
     
