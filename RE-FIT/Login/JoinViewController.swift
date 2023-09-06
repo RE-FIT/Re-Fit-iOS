@@ -30,6 +30,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var numberTestLabel: UILabel!
     @IBOutlet weak var nameTestLabel: UILabel!
     @IBOutlet weak var bdTestLabel: UILabel!
+    @IBOutlet weak var JoinButton: UIButton!
     
     let dropdown = DropDown()
     
@@ -112,7 +113,17 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         NumberTextField.addTarget(self, action: #selector(NumberRegex(_:)), for: .editingChanged)
         NameTextField.addTarget(self, action: #selector(NameRegex(_:)), for: .editingChanged)
         
+        IDTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        PWTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        EmailTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        NumberTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        NameTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        BDTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        GenderTextField.addTarget(self, action: #selector(Join_Enabled(_:)), for: .editingChanged)
+        
         GenderTextField.isEnabled = false
+        
+        JoinButton.isEnabled = false
         
         initUI()
         setDropdown()
@@ -171,10 +182,11 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
     
     @objc func IDRegex(_ textField: UITextField) {
         if isValidID(testStr: textField.text) {
-            idTestLabel.text = ""
+            idTestLabel.text = "* 사용 가능한 아이디입니다."
             idTestLabel.textColor = UIColor(named: "MainColor")
         }
         else {
+            IDTextField.layer.borderColor = UIColor(named: "RedColor")?.cgColor
             idTestLabel.text = "* 8-16자의 영문, 숫자를 포함해야 합니다."
             idTestLabel.textColor = UIColor(named: "RedColor")
         }
@@ -191,6 +203,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             pwTestLabel.textColor = UIColor(named: "MainColor")
         }
         else {
+            PWTextField.layer.borderColor = UIColor(named: "RedColor")?.cgColor
             pwTestLabel.text = "* 8-16자의 영문 대소문자, 숫자, 특수문자 ((!), (_) , (-))를 포함해야 합니다."
             pwTestLabel.textColor = UIColor(named: "RedColor")
         }
@@ -210,6 +223,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             certification.setTitleColor(UIColor.white, for: .normal)
         }
         else {
+            EmailTextField.layer.borderColor = UIColor(named: "RedColor")?.cgColor
             emailTestLabel.text = "* 이메일 형식이 올바르지 않습니다."
             emailTestLabel.textColor = UIColor(named: "RedColor")
             certification.isEnabled = false
@@ -229,6 +243,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             bdTestLabel.textColor = UIColor(named: "MainColor")
         }
         else {
+            BDTextField.layer.borderColor = UIColor(named: "RedColor")?.cgColor
             bdTestLabel.text = "* YYYY/MM/DD 형식으로 작성해야 합니다."
             bdTestLabel.textColor = UIColor(named: "RedColor")
         }
@@ -269,6 +284,14 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         
         UIView.animate(withDuration: 0.1) { // 효과 주기
                 self.view.layoutIfNeeded()
+        }
+    }
+    
+    @objc func Join_Enabled(_ textField: UITextField) {
+        if ((isValidID(testStr: IDTextField.text)) && (isValidPW(testStr: PWTextField.text)) && (isValidBirth(testStr: BDTextField.text)) && (isValidEmail(testStr: EmailTextField.text)) && (NumberTextField.isEnabled == false) && (NameTextField.isEnabled == false) && (GenderTextField.text?.isEmpty == false)) {
+            JoinButton.isEnabled = true
+        } else {
+            JoinButton.isEnabled = false
         }
     }
     
@@ -356,6 +379,7 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
             IdentifyButton.backgroundColor = UIColor(named: "GrayColor")
             IdentifyButton.setTitleColor(UIColor.black, for: .normal)
         } else {
+            NumberTextField.layer.borderColor = UIColor(named: "RedColor")?.cgColor
             numberTestLabel.text = "* 인증번호를 다시 한번 확인해주세요."
             numberTestLabel.textColor = UIColor(named: "RedColor")
         }
@@ -372,7 +396,11 @@ class JoinViewController: UIViewController, UITextFieldDelegate {
         let parameterDatas = CheckNameModel(name: NameTextField.text ?? "")
         APIHandlerCheckNamePost.instance.SendingPostCheckName(parameters: parameterDatas) { result in self.CheckNameData = result }
         if (CheckNameData.code == "10020") {
-            
+            NameTextField.isEnabled = false
+            nameTestLabel.text = "* 사용가능한 닉네임 입니다."
+        } else {
+            NameTextField.layer.borderColor = UIColor(named: "RedColor")?.cgColor
+            nameTestLabel.text = "* 이미 존재하는 닉네임입니다."
         }
     }
     

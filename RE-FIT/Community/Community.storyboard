@@ -950,6 +950,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="ZIT-54-7G9"/>
                                                     <constraint firstAttribute="width" constant="60" id="eKq-1D-l2B"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="나눔">
                                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
@@ -966,11 +967,11 @@
                                                     <constraint firstAttribute="height" constant="30" id="Cfz-rt-sOt"/>
                                                     <constraint firstAttribute="width" constant="60" id="EJu-gm-QVu"/>
                                                 </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="판매">
+                                                <buttonConfiguration key="configuration" style="plain" title="판매">
                                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="12"/>
                                                     <color key="baseForegroundColor" red="0.37694424389999998" green="0.39928340909999999" blue="0.43137720229999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                    <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="Sell_Tapped:" destination="RuC-KC-ceU" eventType="touchUpInside" id="2zU-hI-lYE"/>
@@ -1388,13 +1389,28 @@
                                             <constraint firstItem="f4u-9R-0UT" firstAttribute="top" secondItem="Q2X-kr-844" secondAttribute="bottom" constant="30" id="zdY-3i-alc"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ij5-uz-MK4">
+                                        <rect key="frame" x="10" y="-4" width="35" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="Mdr-tn-ZL6"/>
+                                            <constraint firstAttribute="width" constant="35" id="Vxr-Jg-OqC"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="Back_Icon"/>
+                                        <connections>
+                                            <action selector="backButton:" destination="2jw-fn-zgk" eventType="touchUpInside" id="C8h-nT-MRI"/>
+                                            <action selector="backButton:" destination="RuC-KC-ceU" eventType="touchUpInside" id="Giz-cM-NGa"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.94065803290000005" green="0.94892269370000004" blue="0.96147733930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="oVN-6l-uen" firstAttribute="leading" secondItem="rej-8m-elD" secondAttribute="leading" id="E5y-LJ-EZ8"/>
                                     <constraint firstItem="oVN-6l-uen" firstAttribute="width" secondItem="RnV-xJ-cMx" secondAttribute="width" id="H1J-0l-V1g"/>
+                                    <constraint firstItem="ij5-uz-MK4" firstAttribute="leading" secondItem="RnV-xJ-cMx" secondAttribute="leading" constant="10" id="Np6-16-GXa"/>
                                     <constraint firstItem="oVN-6l-uen" firstAttribute="trailing" secondItem="rej-8m-elD" secondAttribute="trailing" id="bkM-nB-jh0"/>
                                     <constraint firstItem="oVN-6l-uen" firstAttribute="bottom" secondItem="rej-8m-elD" secondAttribute="bottom" id="eCU-Bk-nsg"/>
+                                    <constraint firstItem="ij5-uz-MK4" firstAttribute="top" secondItem="vGa-4d-h1e" secondAttribute="top" constant="-4" id="f9T-hx-Fsi"/>
                                     <constraint firstItem="oVN-6l-uen" firstAttribute="height" secondItem="RnV-xJ-cMx" secondAttribute="height" priority="250" id="zsp-Aq-SJV"/>
                                     <constraint firstItem="oVN-6l-uen" firstAttribute="top" secondItem="rej-8m-elD" secondAttribute="top" id="zzL-qv-qJM"/>
                                 </constraints>

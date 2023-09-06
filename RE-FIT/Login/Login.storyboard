@@ -277,7 +277,7 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="RE-FIT 살펴보기">
-                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
                                     <color key="baseBackgroundColor" name="MainColor"/>
                                 </buttonConfiguration>
                                 <connections>
@@ -285,13 +285,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y0J-UA-SlL">
-                                <rect key="frame" x="40" y="631" width="313" height="50"/>
+                                <rect key="frame" x="40" y="629" width="313" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5li-rT-twj"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="로그인 하러가기">
-                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="15"/>
                                     <color key="baseForegroundColor" name="MainColor"/>
                                     <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
@@ -300,7 +300,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkx-EZ-F0o">
-                                <rect key="frame" x="70" y="697" width="149" height="31"/>
+                                <rect key="frame" x="70" y="695" width="149" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="아이디 / 비밀번호 찾기">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
@@ -311,7 +311,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXS-d5-RIz">
-                                <rect key="frame" x="219" y="705" width="1" height="13"/>
+                                <rect key="frame" x="219" y="703" width="1" height="13"/>
                                 <color key="backgroundColor" red="0.37059777980000003" green="0.39980155229999997" blue="0.43321293589999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="13" id="eee-63-DYK"/>
@@ -322,7 +322,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="apw-5z-Brh">
-                                <rect key="frame" x="220" y="697" width="101" height="31"/>
+                                <rect key="frame" x="220" y="695" width="101" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="일반 회원가입">
                                     <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Medium" family="Apple SD Gothic Neo" pointSize="14"/>
@@ -342,7 +342,7 @@
                             <constraint firstItem="Y0J-UA-SlL" firstAttribute="leading" secondItem="nnH-E0-AiP" secondAttribute="leading" constant="40" id="917-Bb-DZG"/>
                             <constraint firstItem="apw-5z-Brh" firstAttribute="leading" secondItem="AXS-d5-RIz" secondAttribute="trailing" id="IH6-QU-LTM"/>
                             <constraint firstItem="Xpa-OO-CBy" firstAttribute="top" secondItem="F7D-qB-NkK" secondAttribute="bottom" constant="150" id="KzH-kX-hGU"/>
-                            <constraint firstItem="Y0J-UA-SlL" firstAttribute="top" secondItem="Xpa-OO-CBy" secondAttribute="bottom" constant="26" id="NG7-Az-RPs"/>
+                            <constraint firstItem="Y0J-UA-SlL" firstAttribute="top" secondItem="Xpa-OO-CBy" secondAttribute="bottom" constant="24" id="NG7-Az-RPs"/>
                             <constraint firstItem="nnH-E0-AiP" firstAttribute="trailing" secondItem="Y0J-UA-SlL" secondAttribute="trailing" constant="40" id="RdV-5n-uvo"/>
                             <constraint firstItem="apw-5z-Brh" firstAttribute="top" secondItem="Y0J-UA-SlL" secondAttribute="bottom" constant="16" id="RvI-mw-fs4"/>
                             <constraint firstItem="2Fo-dM-mHw" firstAttribute="centerX" secondItem="u0m-lS-2Cd" secondAttribute="centerX" id="SlO-jj-LdE"/>
@@ -1111,7 +1111,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eco-Hq-76c">
-                                                <rect key="frame" x="24" y="0.0" width="35" height="35"/>
+                                                <rect key="frame" x="20" y="0.0" width="35" height="35"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="35" id="OVl-WB-NY9"/>
                                                     <constraint firstAttribute="height" constant="35" id="Rmt-ie-bCd"/>
@@ -1319,7 +1319,7 @@
                                             <constraint firstItem="Ghg-XN-2U4" firstAttribute="top" secondItem="UTl-8f-JgI" secondAttribute="bottom" constant="8" id="Qvd-YB-LFI"/>
                                             <constraint firstAttribute="trailing" secondItem="Eic-Rk-izO" secondAttribute="trailing" constant="50" id="R6M-zh-FLB"/>
                                             <constraint firstItem="8KN-fa-6IZ" firstAttribute="top" secondItem="2Yw-so-1u8" secondAttribute="bottom" constant="60" id="RDD-YZ-Y85"/>
-                                            <constraint firstItem="eco-Hq-76c" firstAttribute="leading" secondItem="MOI-Pz-dvv" secondAttribute="leading" constant="24" id="SGC-bP-Ykt"/>
+                                            <constraint firstItem="eco-Hq-76c" firstAttribute="leading" secondItem="MOI-Pz-dvv" secondAttribute="leading" constant="20" id="SGC-bP-Ykt"/>
                                             <constraint firstItem="Ssa-Tq-Yzp" firstAttribute="leading" secondItem="MOI-Pz-dvv" secondAttribute="leading" constant="33" id="V8e-6P-Adl"/>
                                             <constraint firstItem="x2w-Xt-ic2" firstAttribute="top" secondItem="TLq-b4-NaK" secondAttribute="bottom" constant="8" id="VJL-Lg-zbV"/>
                                             <constraint firstItem="APP-W1-SNI" firstAttribute="top" secondItem="x2w-Xt-ic2" secondAttribute="bottom" constant="3" id="WvG-E7-ILx"/>
@@ -1390,6 +1390,7 @@
                         <outlet property="GenderTextField" destination="APP-W1-SNI" id="XD0-AM-Bie"/>
                         <outlet property="IDTextField" destination="P8D-v0-Bks" id="JAC-8i-N4y"/>
                         <outlet property="IdentifyButton" destination="MOr-on-Z3A" id="0Xw-Pw-O5n"/>
+                        <outlet property="JoinButton" destination="8KN-fa-6IZ" id="6Yx-SM-ptv"/>
                         <outlet property="NameTextField" destination="EaQ-sA-mW2" id="SRl-Nw-6aU"/>
                         <outlet property="NumberTextField" destination="XeQ-TO-YwY" id="z67-RQ-76j"/>
                         <outlet property="NumberView" destination="3gi-xs-QJC" id="ljw-7X-Trv"/>
